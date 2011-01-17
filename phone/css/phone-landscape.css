@@ -1,0 +1,70 @@
+
+
+
+/*
+#fehu {
+	border: solid red 1px;
+	-moz-column-count: 2;
+	-moz-column-gap: 10px;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 10px;
+	column-count: 2;
+	column-gap: 10px;
+	height: 300px;
+}
+
+#fehu h1 {
+	-moz-column-span: all;
+	-webkit-column-span: 2;
+	column-span: all;
+	border: solid blue 1px;
+}
+*/
+
+body {
+    font: normal 100% Helvetica, Arial, sans-serif;
+}
+
+/* 18px / 16px = 1.125em */
+/*
+h1 {
+    font-family: Georgia, serif;
+    font-size: 1.125em;        
+}
+*/
+
+ul {
+    font-size: 1.25em;      /* 14px / 16px = 0.875em */
+}
+
+img {
+	max-width: 100%;
+	
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+/* header div and the h1 title inside in it */
+#header {
+		
+		text-align: center;
+		height: 2.5em; /* 40px / 16px = 0.625 */
+		
+}
+
+#header h1 {
+	
+	margin-top: 0px;
+	font-size: 1.5625em; /* 20px / 16px = 1.25 */
+}
+
+#image {
+	width: 50%;
+	margin-top: 0%;
+}
+
+#desc {
+	
+	width: 45%;
+	float: right;
+}

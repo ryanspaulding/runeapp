@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html lang="en-us" manifest="phone.manifest">
+<html lang="en-us">
 
 <head>
 	<meta charset="utf-8" />
@@ -9,16 +9,29 @@
 	<script language="javascript" src="../js/jquery-1.4.4.min.js"></script>
 	<script language="javascript" src="js/jquery.mobile-1.0a2.min.js"></script>
 	<script language="javascript" src="js/phone.js"></script>
+	
+	<link rel="stylesheet" media="screen and (max-device-width: 480px) and (orientation: landscape)" href="css/phone-landscape.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (max-device-width: 480px) and (orientation: portrait)" href="css/phone-portrait.css" type="text/css" />
 </head>
 <body>
-<div id="fehu_image">
-	<h1>Fehu</h1>
-	<img src="images/fehu.png" alt="fehu" />
-</div>
-<div id="fehu_list">
-	<ul>
-		<li>wealth</li>
-	</ul>
+<div id="page">
+	<div id="header">
+		<h1>Fehu</h1>
+	</div><!-- end header div -->
+	
+	<div id="desc">
+		<ul>
+			<li>wealth</li>
+			<li>cattle</li>
+		</ul>
+	</div> <!-- end desc div -->
+	
+	<div id="image">
+		<img src="images/fehu-phone.png" alt="fehu" />
+	</div> <!-- end image div -->
+	
+
+	
 </div>
 </body>
 </html>
