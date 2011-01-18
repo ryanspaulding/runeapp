@@ -1,23 +1,37 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html> 
+<html lang="en-us">
 
-<html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>RuneApp Screen</title>
+	<meta charset="utf-8" />
+	<title>RuneApp Phone</title>
 	<meta name="author" content="Ryan Spaulding">
 	<!-- Date: 2011-01-09 -->
-	<script language="javascript" src="js/jquery-1.4.4.min.js"></script>
-	<script language="javascript" src="js/screens.js"></script>
+	<script language="javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script language="javascript" src="js/jquery.mobile-1.0a2.min.js"></script>
+	<script language="javascript" src="js/phone.js"></script>
+	
+	<link rel="stylesheet" media="screen and (max-device-width: 480px) and (orientation: landscape)" href="css/phone-landscape.css" type="text/css" />
+		<link rel="stylesheet" media="screen and (max-device-width: 480px) and (orientation: portrait)" href="css/phone-portrait.css" type="text/css" />
 </head>
 <body>
-<h1>Screen View</h1>
-<ul>
-	<li><a href="phone/">Phone View</a></li>
-	<li><a href="tablet/">Tablet View</a></li>
-</ul>
+<div id="page">
+	<div id="header">
+		<h1>Fehu</h1>
+	</div><!-- end header div -->
+	
+	<div id="desc">
+		<ul>
+			<li>wealth</li>
+			<li>cattle</li>
+		</ul>
+	</div> <!-- end desc div -->
+	
+	<div id="image">
+		<img src="images/fehu-phone.png" alt="fehu" />
+	</div> <!-- end image div -->
+	
 
-<div id="console"></div>
-
+	
+</div>
 </body>
 </html>
