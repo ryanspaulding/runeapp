@@ -6,32 +6,700 @@
 	<title>RuneApp Phone</title>
 	<meta name="author" content="Ryan Spaulding">
 	<!-- Date: 2011-01-09 -->
-	<script language="javascript" src="../js/jquery-1.4.4.min.js"></script>
+	<script language="javascript" src="js/jquery-1.4.4.min.js"></script>
 	<script language="javascript" src="js/jquery.mobile-1.0a2.min.js"></script>
+	<script language="javascript" src="js/rune.js"></script>
 	<script language="javascript" src="js/phone.js"></script>
+	<script language="javascript" src="js/rune.js"></script>
 	
+	<link rel="stylesheet" href="css/jquery.mobile-1.0a2.min.css" type="text/css" />
+	<link rel="stylesheet" href="css/common.css" type="text/css" />
 	<link rel="stylesheet" media="screen and (max-device-width: 480px) and (orientation: landscape)" href="css/phone-landscape.css" type="text/css" />
 		<link rel="stylesheet" media="screen and (max-device-width: 480px) and (orientation: portrait)" href="css/phone-portrait.css" type="text/css" />
 </head>
 <body>
-<div id="page">
-	<div id="header">
+<div data-role="page" id="fehu" data-theme="a" >
+	<div data-role="header" id="fehu_header" data-nobackbtn="true">
 		<h1>Fehu</h1>
 	</div><!-- end header div -->
 	
-	<div id="desc">
-		<ul>
-			<li>wealth</li>
-			<li>cattle</li>
-		</ul>
+	<div data-role="content" id="fehu_content">
+		
+		<div id="fehu_desc">
+			<ul>
+				<li>wealth</li>
+				<li>cattle</li>
+			</ul>
+		</div>
+		
+		<div id="fehu_image">
+			<img src="images/phone-fehu.png" alt="fehu" />
+		</div> <!-- end image div -->
+		
 	</div> <!-- end desc div -->
 	
-	<div id="image">
-		<img src="images/fehu-phone.png" alt="fehu" />
-	</div> <!-- end image div -->
 	
-
 	
+	<div id="fehu_footer" data-role="footer">
+		<a href="#toc" class="align-center">runes</a>
+		<a href="#uruz" class="align-right">uruz</a>
+	</div>
 </div>
+
+<div data-role="page" id="uruz" data-theme="a">
+	<div data-role="header" id="uruz_header" data-nobackbtn="true">
+		<h1>Uruz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="uruz_content">
+		<div id="uruz_desc">
+			<ul>
+				<li>ox</li>
+			</ul>
+		</div>
+		
+		<div id="uruz_image">
+			<img src="images/phone-uruz.png" alt="uruz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="uruz_footer" class="align-right" data-role="footer">
+		<a href="#fehu" class="align-left">fehu</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#thurisaz" class="aligh-right">thurisaz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="thurisaz" data-theme="a">
+	<div data-role="header" id="thurisaz_header" data-nobackbtn="true">
+		<h1>Thurisaz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="thurisaz_content">
+		<div id="thurisaz_desc">
+			<ul>
+				<li>Thor</li>
+			</ul>
+		</div>
+		
+		<div id="thurisaz_image">
+			<img src="images/phone-thurisaz.png" alt="thurisaz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="thurisaz_footer" class="align-right" data-role="footer">
+		<a href="#uruz" class="align-left">uruz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#ansuz" class="aligh-right">ansuz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="ansuz" data-theme="a">
+	<div data-role="header" id="ansuz_header" data-nobackbtn="true">
+		<h1>Ansuz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="ansuz_content">
+		<div id="ansuz_desc">
+			<ul>
+				<li>god mouth</li>
+				<li>wisdom</li>
+			</ul>
+		</div>
+		
+		<div id="ansuz_image">
+			<img src="images/phone-ansuz.png" alt="ansuz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="ansuz_footer" class="align-right" data-role="footer">
+		<a href="#thurisaz" class="align-left">thurisaz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#raidho" class="aligh-right">raidho</a>
+	</div>	
+</div>
+
+<div data-role="page" id="raidho" data-theme="a">
+	<div data-role="header" id="raidho_header" data-nobackbtn="true">
+		<h1>Raidho</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="raidho_content">
+		<div id="raidho_desc">
+			<ul>
+				<li>Ride</li>
+			</ul>
+		</div>
+		
+		<div id="raidho_image">
+			<img src="images/phone-raidho.png" alt="raidho" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="raidho_footer" class="align-right" data-role="footer">
+		<a href="#ansuz" class="align-left">ansuz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#kenaz" class="aligh-right">kenaz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="kenaz" data-theme="a">
+	<div data-role="header" id="kenaz_header" data-nobackbtn="true">
+		<h1>Kenaz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="kenaz_content">
+		<div id="kenaz_desc">
+			<ul>
+				<li>Torch</li>
+			</ul>
+		</div>
+		
+		<div id="kenaz_image">
+			<img src="images/phone-kenaz.png" alt="kenaz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="kenaz_footer" class="align-right" data-role="footer">
+		<a href="#raidho" class="align-left">raidho</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#gebo" class="aligh-right">gebo</a>
+	</div>	
+</div>
+
+<div data-role="page" id="gebo" data-theme="a">
+	<div data-role="header" id="gebo_header" data-nobackbtn="true">
+		<h1>Gebo</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="gebo_content">
+		<div id="gebo_desc">
+			<ul>
+				<li>Gift</li>
+			</ul>
+		</div>
+		
+		<div id="gebo_image">
+			<img src="images/phone-gebo.png" alt="gebo" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="gebo_footer" class="align-right" data-role="footer">
+		<a href="#kenaz" class="align-left">kenaz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#wunjo" class="aligh-right">wunjo</a>
+	</div>	
+</div>
+
+<div data-role="page" id="wunjo" data-theme="a">
+	<div data-role="header" id="wunjo_header" data-nobackbtn="true">
+		<h1>Wunjo</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="wunjo_content">
+		<div id="wunjo_desc">
+			<ul>
+				<li>Joy</li>
+			</ul>
+		</div>
+		
+		<div id="wunjo_image">
+			<img src="images/phone-wunjo.png" alt="wunjo" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="wunjo_footer" class="align-right" data-role="footer">
+		<a href="#gebo" class="align-left">gebo</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#hagalaz" class="aligh-right">hagalaz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="hagalaz" data-theme="a">
+	<div data-role="header" id="hagalaz_header" data-nobackbtn="true">
+		<h1>Hagalaz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="hagalaz_content">
+		<div id="hagalaz_desc">
+			<ul>
+				<li>Hail</li>
+			</ul>
+		</div>
+		
+		<div id="hagalaz_image">
+			<img src="images/phone-hagalaz.png" alt="hagalaz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="hagalaz_footer" class="align-right" data-role="footer">
+		<a href="#wunjo" class="align-left">wunjo</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#naudhiz" class="aligh-right">naudhiz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="naudhiz" data-theme="a">
+	<div data-role="header" id="naudhiz_header" data-nobackbtn="true">
+		<h1>Naudhiz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="naudhiz_content">
+		<div id="naudhiz_desc">
+			<ul>
+				<li>Need</li>
+			</ul>
+		</div>
+		
+		<div id="naudhiz_image">
+			<img src="images/phone-naudhiz.png" alt="naudhiz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="naudhiz_footer" class="align-right" data-role="footer">
+		<a href="#hagalaz" class="align-left">hagalaz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#isa" class="aligh-right">isa</a>
+	</div>	
+</div>
+
+<div data-role="page" id="isa" data-theme="a">
+	<div data-role="header" id="isa_header" data-nobackbtn="true">
+		<h1>Isa</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="isa_content">
+		<div id="isa_desc">
+			<ul>
+				<li>Ice</li>
+			</ul>
+		</div>
+		
+		<div id="isa_image">
+			<img src="images/phone-isa.png" alt="isa" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="isa_footer" class="align-right" data-role="footer">
+		<a href="#naudhiz" class="align-left">naudhiz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#jera" class="aligh-right">jera</a>
+	</div>	
+</div>
+
+<div data-role="page" id="jera" data-theme="a">
+	<div data-role="header" id="jera_header" data-nobackbtn="true">
+		<h1>Jera</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="jera_content">
+		<div id="jera_desc">
+			<ul>
+				<li>Year</li>
+			</ul>
+		</div>
+		
+		<div id="jera_image">
+			<img src="images/phone-jera.png" alt="jera" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="jera_footer" class="align-right" data-role="footer">
+		<a href="#isa" class="align-left">isa</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#eihwaz" class="aligh-right">eihwaz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="eihwaz" data-theme="a">
+	<div data-role="header" id="eihwaz_header" data-nobackbtn="true">
+		<h1>Eihwaz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="eihwaz_content">
+		<div id="eihwaz_desc">
+			<ul>
+				<li>Yew Tree</li>
+			</ul>
+		</div>
+		
+		<div id="eihwaz_image">
+			<img src="images/phone-eihwaz.png" alt="eihwaz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="eihwaz_footer" class="align-right" data-role="footer">
+		<a href="#jera" class="align-left">jera</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#perthro" class="aligh-right">perthro</a>
+	</div>	
+</div>
+
+<div data-role="page" id="perthro" data-theme="a">
+	<div data-role="header" id="perthro_header" data-nobackbtn="true">
+		<h1>Perthro</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="perthro_content">
+		<div id="perthro_desc">
+			<ul>
+				<li>Cup</li>
+				</li>Lot</li>
+				<li>Game</li>
+			</ul>
+		</div>
+		
+		<div id="perthro_image">
+			<img src="images/phone-perthro.png" alt="perthro" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="perthro_footer" class="align-right" data-role="footer">
+		<a href="#eihwaz" class="align-left">eihwaz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#elhaz" class="aligh-right">elhaz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="elhaz" data-theme="a">
+	<div data-role="header" id="elhaz_header" data-nobackbtn="true">
+		<h1>Elhaz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="elhaz_content">
+		<div id="elhaz_desc">
+			<ul>
+				<li>Protection</li>
+			</ul>
+		</div>
+		
+		<div id="elhaz_image">
+			<img src="images/phone-elhaz.png" alt="elhaz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="elhaz_footer" class="align-right" data-role="footer">
+		<a href="#perthro" class="align-left">perthro</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#sowilo" class="aligh-right">sowilo</a>
+	</div>	
+</div>
+
+<div data-role="page" id="sowilo" data-theme="a">
+	<div data-role="header" id="sowilo_header" data-nobackbtn="true">
+		<h1>Sowilo</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="sowilo_content">
+		<div id="sowilo_desc">
+			<ul>
+				<li>Sun</li>
+			</ul>
+		</div>
+		
+		<div id="sowilo_image">
+			<img src="images/phone-sowilo.png" alt="sowilo" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="sowilo_footer" class="align-right" data-role="footer">
+		<a href="#elhaz" class="align-left">elhaz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#tiwaz" class="aligh-right">tiwaz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="tiwaz" data-theme="a">
+	<div data-role="header" id="tiwaz_header" data-nobackbtn="true">
+		<h1>Tiwaz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="tiwaz_content">
+		<div id="tiwaz_desc">
+			<ul>
+				<li>Tyr</li>
+			</ul>
+		</div>
+		
+		<div id="tiwaz_image">
+			<img src="images/phone-tiwaz.png" alt="tiwaz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="tiwaz_footer" class="align-right" data-role="footer">
+		<a href="#sowilo" class="align-left">sowilo</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#berkano" class="aligh-right">berkano</a>
+	</div>	
+</div>
+
+<div data-role="page" id="berkano" data-theme="a">
+	<div data-role="header" id="berkano_header" data-nobackbtn="true">
+		<h1>Berkano</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="berkano_content">
+		<div id="berkano_desc">
+			<ul>
+				<li>Birch Tree</li>
+			</ul>
+		</div>
+		
+		<div id="berkano_image">
+			<img src="images/phone-berkano.png" alt="berkano" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="berkano_footer" class="align-right" data-role="footer">
+		<a href="#tiwaz" class="align-left">tiwaz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#ehwaz" class="aligh-right">ehwaz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="ehwaz" data-theme="a">
+	<div data-role="header" id="ehwaz_header" data-nobackbtn="true">
+		<h1>Ehwaz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="ehwaz_content">
+		<div id="ehwaz_desc">
+			<ul>
+				<li>Horse</li>
+			</ul>
+		</div>
+		
+		<div id="ehwaz_image">
+			<img src="images/phone-ehwaz.png" alt="ehwaz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="ehwaz_footer" class="align-right" data-role="footer">
+		<a href="#berkano" class="align-left">berkano</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#mannaz" class="aligh-right">mannaz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="mannaz" data-theme="a">
+	<div data-role="header" id="mannaz_header" data-nobackbtn="true">
+		<h1>Mannaz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="mannaz_content">
+		<div id="mannaz_desc">
+			<ul>
+				<li>Man</li>
+			</ul>
+		</div>
+		
+		<div id="mannaz_image">
+			<img src="images/phone-mannaz.png" alt="mannaz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="mannaz_footer" class="align-right" data-role="footer">
+		<a href="#ehwaz" class="align-left">ehwaz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#laguz" class="aligh-right">laguz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="laguz" data-theme="a">
+	<div data-role="header" id="laguz_header" data-nobackbtn="true">
+		<h1>Laguz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="laguz_content">
+		<div id="laguz_desc">
+			<ul>
+				<li>Lake Leek</li>
+			</ul>
+		</div>
+		
+		<div id="laguz_image">
+			<img src="images/phone-laguz.png" alt="laguz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="laguz_footer" class="align-right" data-role="footer">
+		<a href="#mannaz" class="align-left">mannaz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#ingwaz" class="aligh-right">ingwaz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="ingwaz" data-theme="a">
+	<div data-role="header" id="ingwaz_header" data-nobackbtn="true">
+		<h1>Ingwaz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="ingwaz_content">
+		<div id="ingwaz_desc">
+			<ul>
+				<li>Ing</li>
+			</ul>
+		</div>
+		
+		<div id="ingwaz_image">
+			<img src="images/phone-ingwaz.png" alt="ingwaz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="ingwaz_footer" class="align-right" data-role="footer">
+		<a href="#ingwaz" class="align-left">ingwaz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#dagaz" class="aligh-right">dagaz</a>
+	</div>	
+</div>
+
+<div data-role="page" id="dagaz" data-theme="a">
+	<div data-role="header" id="dagaz_header" data-nobackbtn="true">
+		<h1>Dagaz</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="dagaz_content">
+		<div id="dagaz_desc">
+			<ul>
+				<li>Day</li>
+			</ul>
+		</div>
+		
+		<div id="dagaz_image">
+			<img src="images/phone-dagaz.png" alt="dagaz" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="dagaz_footer" class="align-right" data-role="footer">
+		<a href="#ingwaz" class="align-left">ingwaz</a>
+		<a href="#toc" class="align-center">runes</a>
+	 	<a href="#othala" class="aligh-right">othala</a>
+	</div>	
+</div>
+
+<div data-role="page" id="othala" data-theme="a">
+	<div data-role="header" id="othala_header" data-nobackbtn="true">
+		<h1>Othala</h1>
+	</div><!-- end header div -->
+	
+	<div data-role="content" id="othala_content">
+		<div id="othala_desc">
+			<ul>
+				<li>Home</li>
+			</ul>
+		</div>
+		
+		<div id="othala_image">
+			<img src="images/phone-othala.png" alt="othala" />
+		</div> <!-- end image div -->
+	</div> <!-- end desc div -->
+	
+	<div id="othala_footer" class="align-right" data-role="footer">
+		<a href="#ingwaz" class="align-left">ingwaz</a>
+		<a href="#toc">runes</a>
+	</div>	
+</div>
+
+<div data-role="page"  id="toc" data-theme="a">
+	<ul data-role="listview" data-theme="a">
+		<li>
+			<img src="images/phone-fehu.png" alt="fehu" class="ui-li-thumb" />
+			<a href="#fehu">fehu</a>
+		</li>
+		<li>
+			<img src="images/phone-uruz.png" alt="uruz" class="ui-li-thumb" />
+			<a href="#uruz">uruz</a>
+		</li>
+		<li>
+			<img src="images/phone-thurisaz.png" alt="thurisaz" class="ui-li-thumb" />
+			<a href="#thurisaz">thurisaz</a>
+		</li>
+		<li>
+			<img src="images/phone-ansuz.png" alt="ansuz" class="ui-li-thumb" />
+			<a href="#ansuz">ansuz</a>
+		</li>
+		<li>
+			<img src="images/phone-raidho.png" alt="raidho" class="ui-li-thumb" />
+			<a href="#raidho">raidho</a>
+		</li>
+		<li>
+			<img src="images/phone-kenaz.png" alt="kenaz" class="ui-li-thumb" />
+			<a href="#kenaz">kenaz</a>
+		</li>
+		<li>
+			<img src="images/phone-gebo.png" alt="gebo" class="ui-li-thumb" />
+			<a href="#gebo">gebo</a>
+		</li>
+		<li>
+			<img src="images/phone-wunjo.png" alt="wunjo" class="ui-li-thumb" />
+			<a href="#wunjo">wunjo</a>
+		</li>
+		<li>
+			<img src="images/phone-hagalaz.png" alt="hagalaz" class="ui-li-thumb" />
+			<a href="#hagalaz">hagalaz</a>
+		</li>
+		<li>
+			<img src="images/phone-naudhiz.png" alt="naudhiz" class="ui-li-thumb" />
+			<a href="#naudhiz">naudhiz</a>
+		</li>
+		<li>
+			<img src="images/phone-isa.png" alt="isa" class="ui-li-thumb" />
+			<a href="#isa">isa</a>
+		</li>
+		<li>
+			<img src="images/phone-jera.png" alt="jera" class="ui-li-thumb" />
+			<a href="#jera">jera</a>
+		</li>
+		<li>
+			<img src="images/phone-eihwaz.png" alt="eihwaz" class="ui-li-thumb" />
+			<a href="#eihwaz">eihwaz</a>
+		</li>
+		<li>
+			<img src="images/phone-perthro.png" alt="perthro" class="ui-li-thumb" />
+			<a href="#perthro">perthro</a>
+		</li>
+		<li>
+			<img src="images/phone-elhaz.png" alt="elhaz" class="ui-li-thumb" />
+			<a href="#elhaz">elhaz</a>
+		</li>
+		<li>
+			<img src="images/phone-sowilo.png" alt="sowilo" class="ui-li-thumb" />
+			<a href="#sowilo">sowilo</a>
+		</li>
+		<li>
+			<img src="images/phone-tiwaz.png" alt="tiwaz" class="ui-li-thumb" />
+			<a href="#tiwaz">tiwaz</a>
+		</li>
+		<li>
+			<img src="images/phone-berkano.png" alt="berkano" class="ui-li-thumb" />
+			<a href="#berkano">berkano</a>
+		</li>
+		<li>
+			<img src="images/phone-ehwaz.png" alt="ehwaz" class="ui-li-thumb" />
+			<a href="#ehwaz">ehwaz</a>
+		</li>
+		<li>
+			<img src="images/phone-mannaz.png" alt="mannaz" class="ui-li-thumb" />
+			<a href="#mannaz">mannaz</a>
+		</li>
+		<li>
+			<img src="images/phone-laguz.png" alt="laguz" class="ui-li-thumb" />
+			<a href="#laguz">laguz</a>
+		</li>
+		<li>
+			<img src="images/phone-ingwaz.png" alt="ingwaz" class="ui-li-thumb" />
+			<a href="#ingwaz">ingwaz</a>
+		</li>
+		<li>
+			<img src="images/phone-dagaz.png" alt="dagaz" class="ui-li-thumb" />
+			<a href="#dagaz">dagaz</a>
+		</li>
+		<li>
+			<img src="images/phone-othala.png" alt="othala" class="ui-li-thumb" />
+			<a href="#othala">othala</a>
+		</li>
+	</ul>
+</div>
+
 </body>
 </html>
