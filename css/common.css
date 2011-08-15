@@ -1,4 +1,15 @@
 
+canvas {
+	border: 1px solid black;
+	/* testing some % stuff */
+	width: 50%;
+	height: 50%;
+}
+
+#fehu_canvas {
+	background-image: url("../images/wood.jpeg");
+}
+
 .align-right {
 	text-align: right;
 }
