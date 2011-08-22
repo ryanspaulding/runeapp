@@ -166,6 +166,340 @@ function build_isa() {
         draw_line(stage_context);
 }
 
+function build_gebo() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+	// left to right part of the X
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center + 30, line_length);
+
+	// right to left part of the X
+        stage_context.moveTo(canvas_center + 30, 10);
+        stage_context.lineTo(canvas_center - 30, line_length);
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+
+function build_wunjo() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+	
+	// long left line
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+	// top part of upper triangle  
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center + 30, line_quarter);
+
+	// bottom part of upper triangle 
+        stage_context.moveTo(canvas_center + 30, line_quarter);
+        stage_context.lineTo(canvas_center, line_length / 2);
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+
+function build_hagalaz() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+	// left line
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center - 30, line_length);
+
+	// right line
+        stage_context.moveTo(canvas_center + 30, 10);
+        stage_context.lineTo(canvas_center + 30, line_length);
+
+	// diaginal line through the two parallel lines  
+        stage_context.moveTo(canvas_center - 30, line_quarter);
+        stage_context.lineTo(canvas_center + 30, line_length - line_quarter);
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+
+function build_jera() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+	// lower left less then sign upper line
+        stage_context.moveTo(canvas_center, line_quarter + 20);
+        stage_context.lineTo(canvas_center - 40, line_quarter * 3 );
+
+	// lower left less then sign lower line
+        stage_context.moveTo(canvas_center - 40, line_quarter * 3);
+        stage_context.lineTo(canvas_center, line_length);
+
+	// upper right greater then sign upper line
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center + 40, line_quarter + 20);
+
+	// upper right greater then sign lower line
+        stage_context.moveTo(canvas_center + 40, line_quarter + 20);
+        stage_context.lineTo(canvas_center, line_quarter * 3);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_eiwaz() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+	
+	// center line
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+	// top line
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+	//  line
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_othala() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_dagaz() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_ingwaz() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_laguz() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_mannaz() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_ehwaz() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_berkano() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_tiwaz() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_sowilo() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_elhaz() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_perthro() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
+function build_eihwaz() {
+
+	stage = setup_stage('fehu_canvas');
+
+        var stage_context = stage.getContext("2d");
+
+        var line_length = stage.height - 10;
+        var canvas_center = stage.width / 2;
+        var line_quarter = line_length / 4;
+
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center, line_length);
+
+
+	// filling in the ink to the stroke
+        draw_line(stage_context);
+}
 function build_raidho() {
 
 	stage = setup_stage('fehu_canvas');
@@ -182,11 +516,15 @@ function build_raidho() {
 
 	// top part of the R
 	stage_context.moveTo(canvas_center - 30, 10);
-        stage_context.lineTo(canvas_center - 30, line_length);
+        stage_context.lineTo(canvas_center + 30, line_quarter + 10);
 
 	// bottom part of the R 
+	stage_context.moveTo(canvas_center + 30, line_quarter + 10);
+        stage_context.lineTo(canvas_center - 30, line_length / 2);
 
 	// right leg 
+	stage_context.moveTo(canvas_center - 30, line_length / 2);
+        stage_context.lineTo(canvas_center + 30, line_length - 5);
 
 	// filling in the ink to the stroke
         draw_line(stage_context);
@@ -227,11 +565,7 @@ function draw_line(canvas) {
 
 
 $(window).resize(function() {	
-	build_kenaz();
-	build_nauthez();
-	build_ansuz();
-	build_uruz();
-	build_isa();	
+	build_eiwaz();
 });
 
 $(document).ready(function() {
@@ -240,10 +574,5 @@ $(document).ready(function() {
                         console.log("your document is ready....");
         }
 
-
-	build_kenaz();
-	build_nauthez();
-	build_ansuz();
-	build_uruz();
-	build_isa();	
+	build_eiwaz();
 });
