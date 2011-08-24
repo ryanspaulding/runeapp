@@ -286,11 +286,11 @@ function build_eiwaz() {
 
 	// top line
         stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center, line_length);
+        stage_context.lineTo(canvas_center - 30, line_quarter + 10);
 
-	//  line
-        stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center, line_length);
+	// botom  line
+        stage_context.moveTo(canvas_center, line_length);
+        stage_context.lineTo(canvas_center + 30, line_quarter * 3 - 10);
 
 
 	// filling in the ink to the stroke
@@ -306,9 +306,21 @@ function build_othala() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
-        stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center, line_length);
+	// left to right part of the X
+        stage_context.moveTo(canvas_center - 30, line_quarter + 10);
+        stage_context.lineTo(canvas_center + 30, line_length);
 
+	// right to left part of the X
+        stage_context.moveTo(canvas_center + 30, line_quarter + 10);
+        stage_context.lineTo(canvas_center - 30, line_length);
+
+	// top left  
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center - 30, line_quarter + 10);
+
+	// top right 
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center + 30, line_quarter + 10);
 
 	// filling in the ink to the stroke
         draw_line(stage_context);
@@ -323,9 +335,21 @@ function build_dagaz() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
-        stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center, line_length);
+	// left to right part of the X
+        stage_context.moveTo(canvas_center - 30, 15);
+        stage_context.lineTo(canvas_center + 30, line_length - 5);
 
+	// right to left part of the X
+        stage_context.moveTo(canvas_center + 30, 15);
+        stage_context.lineTo(canvas_center - 30, line_length - 5);
+
+	// outer left line
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center - 30, line_length);
+
+	// outer right line 
+        stage_context.moveTo(canvas_center + 30, 10);
+        stage_context.lineTo(canvas_center + 30, line_length);
 
 	// filling in the ink to the stroke
         draw_line(stage_context);
@@ -340,7 +364,20 @@ function build_ingwaz() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
+	// top left part of square
         stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center - 30, line_quarter * 2);
+
+	// top right part of square
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center + 30, line_quarter * 2);
+
+	// bottom right part of square
+        stage_context.moveTo(canvas_center - 30, line_quarter * 2);
+        stage_context.lineTo(canvas_center, line_length);
+
+	// bottom left part of square
+        stage_context.moveTo(canvas_center + 30, line_quarter * 2);
         stage_context.lineTo(canvas_center, line_length);
 
 
@@ -357,8 +394,13 @@ function build_laguz() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
+	// center line
         stage_context.moveTo(canvas_center, 10);
         stage_context.lineTo(canvas_center, line_length);
+
+	// top right line 
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center + 30, line_quarter + 10);
 
 
 	// filling in the ink to the stroke
@@ -374,9 +416,21 @@ function build_mannaz() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
-        stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center, line_length);
+	// left to right part of the X
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center + 30, line_length / 2);
 
+	// right to left part of the X
+        stage_context.moveTo(canvas_center + 30, 10);
+        stage_context.lineTo(canvas_center - 30, line_length / 2);
+
+	// left line
+        stage_context.moveTo(canvas_center + 30, 10);
+        stage_context.lineTo(canvas_center + 30, line_length);
+
+	// right line
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center - 30, line_length);
 
 	// filling in the ink to the stroke
         draw_line(stage_context);
@@ -391,8 +445,21 @@ function build_ehwaz() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
-        stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center, line_length);
+	// left top
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center, line_length / 2);
+
+	// right top
+        stage_context.moveTo(canvas_center + 30, 10);
+        stage_context.lineTo(canvas_center, line_length / 2);
+
+	// left line
+        stage_context.moveTo(canvas_center + 30, 10);
+        stage_context.lineTo(canvas_center + 30, line_length);
+
+	// right line
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center - 30, line_length);
 
 
 	// filling in the ink to the stroke
@@ -408,9 +475,25 @@ function build_berkano() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
-        stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center, line_length);
+	// center line
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center - 30, line_length);
 
+	// upper bump top
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center, line_quarter + 10);
+
+	// upper bump bottom 
+        stage_context.moveTo(canvas_center, line_quarter + 10);
+        stage_context.lineTo(canvas_center - 30, line_quarter * 2);
+
+	// lower bump top
+        stage_context.moveTo(canvas_center - 30, line_quarter * 2);
+        stage_context.lineTo(canvas_center, line_quarter * 3);
+
+	// lower bump bottom 
+        stage_context.moveTo(canvas_center, line_quarter * 3);
+        stage_context.lineTo(canvas_center - 30, line_length);
 
 	// filling in the ink to the stroke
         draw_line(stage_context);
@@ -565,7 +648,7 @@ function draw_line(canvas) {
 
 
 $(window).resize(function() {	
-	build_eiwaz();
+	build_berkano();
 });
 
 $(document).ready(function() {
@@ -574,5 +657,5 @@ $(document).ready(function() {
                         console.log("your document is ready....");
         }
 
-	build_eiwaz();
+	build_berkano();
 });
