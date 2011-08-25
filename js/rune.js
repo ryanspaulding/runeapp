@@ -508,8 +508,17 @@ function build_tiwaz() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
+	// line in the center 
         stage_context.moveTo(canvas_center, 10);
         stage_context.lineTo(canvas_center, line_length);
+
+	// top left line  
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center - 30, line_quarter + 10);
+
+	// top right line 
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center + 30, line_quarter + 10);
 
 
 	// filling in the ink to the stroke
@@ -525,8 +534,18 @@ function build_sowilo() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
-        stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center, line_length);
+	// 1st top line
+        stage_context.moveTo(canvas_center + 30, 10);
+        stage_context.lineTo(canvas_center - 30, line_quarter + 10);
+
+	// 2nd top line
+        stage_context.moveTo(canvas_center - 30, line_quarter + 10);
+        stage_context.lineTo(canvas_center + 30, line_quarter * 2 + 10);
+
+	// 3rd top line
+        stage_context.moveTo(canvas_center + 30, line_quarter * 2 + 10);
+        stage_context.lineTo(canvas_center - 30, line_quarter * 3 + 10);
+
 
 
 	// filling in the ink to the stroke
@@ -542,8 +561,17 @@ function build_elhaz() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
+	// line down the center 
         stage_context.moveTo(canvas_center, 10);
         stage_context.lineTo(canvas_center, line_length);
+
+	// left top  
+        stage_context.moveTo(canvas_center, line_quarter + 10);
+        stage_context.lineTo(canvas_center - 30, 10);
+
+	// right top  
+        stage_context.moveTo(canvas_center, line_quarter + 10);
+        stage_context.lineTo(canvas_center + 30, 10);
 
 
 	// filling in the ink to the stroke
@@ -559,9 +587,25 @@ function build_perthro() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
-        stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center, line_length);
+	// line to the left
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center - 30, line_length);
 
+	// top left
+        stage_context.moveTo(canvas_center - 30, 10);
+        stage_context.lineTo(canvas_center, line_quarter + 10);
+
+	// top right 
+        stage_context.moveTo(canvas_center, line_quarter + 10);
+        stage_context.lineTo(canvas_center + 30, 10);
+
+	// bottom left
+        stage_context.moveTo(canvas_center - 30, line_length);
+        stage_context.lineTo(canvas_center, line_length - line_quarter);
+
+	// bottom right 
+        stage_context.moveTo(canvas_center, line_length - line_quarter);
+        stage_context.lineTo(canvas_center + 30, line_length);
 
 	// filling in the ink to the stroke
         draw_line(stage_context);
@@ -576,9 +620,17 @@ function build_eihwaz() {
         var canvas_center = stage.width / 2;
         var line_quarter = line_length / 4;
 
+	// center line 
         stage_context.moveTo(canvas_center, 10);
         stage_context.lineTo(canvas_center, line_length);
 
+	// top line 
+        stage_context.moveTo(canvas_center, 10);
+        stage_context.lineTo(canvas_center - 30, line_quarter + 10);
+
+	// bottom line 
+        stage_context.moveTo(canvas_center, line_length);
+        stage_context.lineTo(canvas_center + 30, line_length - line_quarter);
 
 	// filling in the ink to the stroke
         draw_line(stage_context);
@@ -648,7 +700,7 @@ function draw_line(canvas) {
 
 
 $(window).resize(function() {	
-	build_berkano();
+	build_eihwaz();
 });
 
 $(document).ready(function() {
@@ -657,5 +709,5 @@ $(document).ready(function() {
                         console.log("your document is ready....");
         }
 
-	build_berkano();
+	build_eihwaz();
 });
