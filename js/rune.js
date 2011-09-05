@@ -850,13 +850,57 @@ function move_rune(rune) {
 		// set to 'block'
 		$(active_rune_selector).removeClass('show').addClass('hide').fadeOut('slow');
 		// build the rune on the canvas
+		// need to find a better way then a huge if/else block to solve this 
 		if (rune_name == 'fehu') {
 			build_fehu();
 		} else if (rune_name == 'uruz') {
 			build_uruz();
 		} else if (rune_name == 'thurisaz') {
 			build_thurisaz();
-		}
+		} else if (rune_name == 'ansuz') {
+			build_ansuz();
+		} else if (rune_name == 'raidho') {
+			build_raidho();
+		} else if (rune_name == 'kenaz') {
+			build_kenaz();
+		} else if (rune_name == 'gebo') {
+			build_gebo();
+		} else if (rune_name == 'wunjo') {
+			build_wunjo();
+		} else if (rune_name == 'hagalaz') {
+			build_hagalaz();
+		} else if (rune_name == 'naudhiz') {
+			build_naudhiz();
+		} else if (rune_name == 'isa') {
+			build_isa();
+		} else if (rune_name == 'jera') {
+			build_jera();
+		} else if (rune_name == 'eihwaz') {
+			build_eihwaz();
+		} else if (rune_name == 'perthro') {
+			build_perthro();
+		} else if (rune_name == 'elhaz') {
+			build_elhaz();
+		} else if (rune_name == 'sowilo') {
+			build_sowilo();
+		} else if (rune_name == 'tiwaz') {
+			build_tiwaz();
+		} else if (rune_name == 'berkano') {
+			build_berkano();
+		} else if (rune_name == 'ehwaz') {
+			build_ehwaz();
+		} else if (rune_name == 'mannaz') {
+			build_mannaz();
+		} else if (rune_name == 'laguz') {
+			build_laguz();
+		} else if (rune_name == 'ingwaz') {
+			build_ingwaz();
+		} else if (rune_name == 'dagaz') {
+			build_dagaz();
+		} else if (rune_name == 'othala') {
+			build_othala();
+		} // no else 
+		
 
 		$(rune_selector).removeClass('hide').fadeIn('slow');
 		// let the rest of the app know who the active rune is
