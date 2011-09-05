@@ -2,9 +2,21 @@
 var debug = true;
 
 
-function build_fehu() {
+/*
+	build_fehu:
+			build the fehu rune on the canvas that is passed. If none
+			is given the the default (fehu_canvas) is used.	
+		
+	Inputs:
+		canvas: the canvas you want to draw fehu on 
+*/
+function build_fehu(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'fehu_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 	// line from the top to bottom of fehu
@@ -26,9 +38,13 @@ function build_fehu() {
 	draw_line(stage_context);
 }
 
-function build_uruz() {
+function build_uruz(canvas) {
+	
+	if (canvas == null) {
+		canvas = 'uruz_canvas';
+	}
 
-	stage = setup_stage('fehu_canvas');
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 	// line from the top to bottom of uruz 
@@ -53,9 +69,13 @@ function build_uruz() {
 	draw_line(stage_context);
 }
 
-function build_thurisaz() {
+function build_thurisaz(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'thurisaz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -79,9 +99,13 @@ function build_thurisaz() {
 	draw_line(stage_context);
 }
 
-function build_ansuz() {
+function build_ansuz(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'ansuz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -105,8 +129,13 @@ function build_ansuz() {
         draw_line(stage_context);
 }
 
-function build_nauthez() {
-	stage = setup_stage('fehu_canvas');
+function build_naudhiz(canvas) {
+
+	if (canvas == null) {
+		canvas = 'naudhiz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -126,8 +155,13 @@ function build_nauthez() {
         draw_line(stage_context);
 }
 
-function build_kenaz() {
-	stage = setup_stage('fehu_canvas');
+function build_kenaz(canvas) {
+
+	if (canvas == null) {
+		canvas = 'kenaz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -148,9 +182,13 @@ function build_kenaz() {
         draw_line(stage_context);
 }
 
-function build_isa() {
+function build_isa(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'isa_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -166,9 +204,13 @@ function build_isa() {
         draw_line(stage_context);
 }
 
-function build_gebo() {
+function build_gebo(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'gebo_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -188,9 +230,13 @@ function build_gebo() {
         draw_line(stage_context);
 }
 
-function build_wunjo() {
+function build_wunjo(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'wunjo_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -214,9 +260,13 @@ function build_wunjo() {
         draw_line(stage_context);
 }
 
-function build_hagalaz() {
+function build_hagalaz(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'hagalaz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -240,9 +290,13 @@ function build_hagalaz() {
         draw_line(stage_context);
 }
 
-function build_jera() {
+function build_jera(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'jera_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -270,35 +324,14 @@ function build_jera() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_eiwaz() {
 
-	stage = setup_stage('fehu_canvas');
-
-        var stage_context = stage.getContext("2d");
-
-        var line_length = stage.height - 10;
-        var canvas_center = stage.width / 2;
-        var line_quarter = line_length / 4;
+function build_othala(canvas) {
 	
-	// center line
-        stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center, line_length);
+	if (canvas == null) {
+		canvas = 'othala_canvas';
+	}
 
-	// top line
-        stage_context.moveTo(canvas_center, 10);
-        stage_context.lineTo(canvas_center - 30, line_quarter + 10);
-
-	// botom  line
-        stage_context.moveTo(canvas_center, line_length);
-        stage_context.lineTo(canvas_center + 30, line_quarter * 3 - 10);
-
-
-	// filling in the ink to the stroke
-        draw_line(stage_context);
-}
-function build_othala() {
-
-	stage = setup_stage('fehu_canvas');
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -325,9 +358,13 @@ function build_othala() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_dagaz() {
+function build_dagaz(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'dagaz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -354,9 +391,13 @@ function build_dagaz() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_ingwaz() {
+function build_ingwaz(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'ingwaz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -384,9 +425,13 @@ function build_ingwaz() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_laguz() {
+function build_laguz(canvas) {
+	
+	if (canvas == null) {
+		canvas = 'laguz_canvas';
+	}
 
-	stage = setup_stage('fehu_canvas');
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -406,9 +451,13 @@ function build_laguz() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_mannaz() {
+function build_mannaz(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'mannaz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -435,9 +484,13 @@ function build_mannaz() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_ehwaz() {
+function build_ehwaz(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'ehwaz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -465,9 +518,13 @@ function build_ehwaz() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_berkano() {
+function build_berkano(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'berkano_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -498,9 +555,13 @@ function build_berkano() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_tiwaz() {
+function build_tiwaz(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'tiwaz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -524,9 +585,13 @@ function build_tiwaz() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_sowilo() {
+function build_sowilo(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'sowilo_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -551,9 +616,13 @@ function build_sowilo() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_elhaz() {
+function build_elhaz(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'elhaz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -577,9 +646,13 @@ function build_elhaz() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_perthro() {
+function build_perthro(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'perthro_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -610,9 +683,13 @@ function build_perthro() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_eihwaz() {
+function build_eihwaz(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'eihwaz_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -635,9 +712,13 @@ function build_eihwaz() {
 	// filling in the ink to the stroke
         draw_line(stage_context);
 }
-function build_raidho() {
+function build_raidho(canvas) {
 
-	stage = setup_stage('fehu_canvas');
+	if (canvas == null) {
+		canvas = 'raidho_canvas';
+	}
+
+	stage = setup_stage(canvas);
 
         var stage_context = stage.getContext("2d");
 
@@ -709,5 +790,29 @@ $(document).ready(function() {
                         console.log("your document is ready....");
         }
 
-	build_eihwaz();
-});
+	/* button setup */
+	build_fehu('fehu_button');
+	build_uruz('uruz_button');
+	build_thurisaz('thurisaz_button');
+	build_ansuz('ansuz_button');
+	build_raidho('raidho_button');
+	build_kenaz('kenaz_button');
+	build_gebo('gebo_button');
+	build_wunjo('wunjo_button');
+	build_hagalaz('hagalaz_button');
+	build_naudhiz('naudhiz_button');
+	build_isa('isa_button');
+	build_jera('jera_button');
+	build_eihwaz('eihwaz_button');
+	build_perthro('perthro_button');
+	build_elhaz('elhaz_button');
+	build_sowilo('sowilo_button');
+	build_tiwaz('tiwaz_button');
+	build_berkano('berkano_button');
+	build_ehwaz('ehwaz_button');
+	build_mannaz('mannaz_button');
+	build_laguz('laguz_button');
+	build_ingwaz('ingwaz_button');
+	build_dagaz('dagaz_button');
+	build_othala('othala_button');
+});	

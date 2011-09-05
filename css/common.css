@@ -1,16 +1,34 @@
 
-canvas {
+#fehu_canvas {
+	background-image: url("../images/wood.jpeg");
 	border: 1px solid black;
 	/* testing some % stuff */
 	width: 50%;
 	height: 50%;
 }
 
-#fehu_canvas {
-	background-image: url("../images/wood.jpeg");
+.button_canvas {
+	width: 2.5em;
+	height: 2.5em;
+	border: 1px solid black;
+}
+
+.button_link {
+	width: 5em;
 }
 
 .align-right {
 	text-align: right;
 }
 
+#nav_large_screen {
+	-moz-column-width: 150px;
+	-webkit-column-width: 150px;	
+	border: 1px solid blue;
+	
+}
+
+#nav_large_screen ul li {
+	width: 5em;
+	text-align: center;
+}
