@@ -1,5 +1,6 @@
 
 var debug = true;
+var active_rune = null;
 
 
 /*
@@ -750,7 +751,9 @@ function setup_stage(stage_id) {
 	
         var stage = document.getElementById(stage_id);
 	// reset the canvas to nothing 
-	//stage.width = stage.width;
+	if (stage.width != null) {
+		stage.width = stage.width;
+	}
         if (window.console && debug) {
                         console.log(stage);
         }
@@ -790,6 +793,13 @@ $(document).ready(function() {
                         console.log("your document is ready....");
         }
 
+	/* we always start off with fehu */
+	if (active_rune == null) {
+		active_rune = 'fehu';
+		// build our stage for the first time
+		build_fehu();
+	}
+
 	/* button setup */
 	build_fehu('fehu_button');
 	build_uruz('uruz_button');
@@ -815,4 +825,42 @@ $(document).ready(function() {
 	build_ingwaz('ingwaz_button');
 	build_dagaz('dagaz_button');
 	build_othala('othala_button');
+
+	// this is the little canvas button of the rune
+	$(".button_canvas").click(function() {
+		move_rune(this);
+	});
+
+	// this is the text link under the canvas button of the rune
+	$(".button_link").click(function() {
+		move_rune(this);
+	});
 });	
+
+function move_rune(rune) {
+		var rune_name = $(rune).data('name');
+		var rune_selector = "#" + rune_name;
+		
+		if (window.console && debug) {
+			console.log("just clicked a rune: " + rune_name);
+		}
+
+		var active_rune_selector = "#" + active_rune;
+		// by setting the active rune's display to 'none' it will bump up the rune selected once it's display is 
+		// set to 'block'
+		$(active_rune_selector).removeClass('show').addClass('hide').fadeOut('slow');
+		// build the rune on the canvas
+		if (rune_name == 'fehu') {
+			build_fehu();
+		} else if (rune_name == 'uruz') {
+			build_uruz();
+		} else if (rune_name == 'thurisaz') {
+			build_thurisaz();
+		}
+
+		$(rune_selector).removeClass('hide').fadeIn('slow');
+		// let the rest of the app know who the active rune is
+		active_rune = rune_name;
+}
+	
+

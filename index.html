@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="css/common.css" type="text/css" />
 </head>
 <body>
-<div id="fehu">
+<div id="fehu" class="show">
 	<h2>Fehu</h2>
 	<canvas id="fehu_canvas"></canvas>
 	 <ul>   
@@ -20,20 +20,35 @@
         </ul>
 </div><!-- end of fehu -->
 
+<div id="uruz" class="hide">
+	<h2>Uruz</h2>
+	<canvas id="uruz_canvas"></canvas>
+	 <ul>   
+         	<li>ox</li>
+        </ul>
+</div><!-- end of uruz -->
+
+<div id="thurisaz" class="hide">
+	<h2>Thurisaz</h2>
+	<canvas id="thurisaz_canvas"></canvas>
+	 <ul>   
+         	<li>Thor</li>
+        </ul>
+</div><!-- end of thurisaz -->
 <!-- navigation -->
 <div id="nav_large_screen">
 	<ul>
 		<li>
-			<canvas class="button_canvas" id="fehu_button"></canvas>
-			<a href="#fehu" title="fehu" name="fehu_button" class="button_link">fehu</a>
+			<canvas data-name="fehu" class="button_canvas" id="fehu_button"></canvas>
+			<a data-name="fehu" href="#fehu" title="fehu" name="fehu_button" class="button_link">fehu</a>
 		</li>
 		<li>
-			<canvas class="button_canvas" id="uruz_button"></canvas>
-			<a href="#uruz" title="uruz" name="uruz">uruz</a>
+			<canvas data-name="uruz" class="button_canvas" id="uruz_button"></canvas>
+			<a data-name="uruz" href="#uruz" title="uruz" name="uruz" class="button_link">uruz</a>
 		</li>
 		<li>
-			<canvas class="button_canvas" id="thurisaz_button"></canvas>
-			<a href="#thurisaz" title="thurisaz" name="thurisaz">thurisaz</a>
+			<canvas data-name="thurisaz" class="button_canvas" id="thurisaz_button"></canvas>
+			<a data-name="thurisaz" href="#thurisaz" title="thurisaz" name="thurisaz" class="button_link">thurisaz</a>
 		</li>
 		<li>
 			<canvas class="button_canvas" id="ansuz_button"></canvas>

@@ -1,10 +1,29 @@
 
-#fehu_canvas {
+div canvas {
 	background-image: url("../images/wood.jpeg");
 	border: 1px solid black;
 	/* testing some % stuff */
 	width: 50%;
 	height: 50%;
+}
+
+#rune_container {
+	border: 1px solid red;	
+	width: 100%;
+	height: 50%;
+	display: block;
+}
+
+/* 	class to control where the rune details go, for now 
+ 	they are just all on top of each other. When clicking we
+	show or hide the one selected.
+*/
+.details {
+	border: 1px solid yellow;
+	position: absolute;
+	width: 50%;
+	height: 50%;
+	display: block;
 }
 
 .button_canvas {
@@ -19,6 +38,14 @@
 
 .align-right {
 	text-align: right;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
 }
 
 #nav_large_screen {
