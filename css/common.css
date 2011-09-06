@@ -20,6 +20,14 @@ div canvas {
 	box-shadow: 3px 3px 5px #000;
 }
 
+/* temp */
+#choice {
+	text-align: center;
+}
+#choice a:link, #choice a:visited {
+	color: white;
+}
+
 #rune_container {
 	border: 1px solid red;	
 	width: 100%;

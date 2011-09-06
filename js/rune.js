@@ -3,7 +3,7 @@ var debug = true;
 var active_rune = null;
 var rune_casted = false;
 var runes = new Array('fehu', 'uruz', 'thurisaz', 'ansuz', 'raidho', 'kenaz', 'gebo', 'wunjo', 'hagalaz', 'naudhiz', 'isa', 'jera', 'eihwaz', 'perthro', 'elhaz', 'sowilo', 'tiwaz', 'berkano', 'ehwaz', 'mannaz', 'laguz', 'ingwaz', 'dagaz', 'othala');
-
+var casted_runes = new Array();
 
 /*
 	build_fehu:
@@ -840,7 +840,38 @@ $(document).ready(function() {
 
 	// button for casting 
 	$("#cast_button").click(function() {
+		if (rune_casted) {
+			// now need to loop through and remove 
+			for (var i = 0; i < casted_runes.length; i++) {
+				var rune_casted_selector = "#" + casted_runes[i];
+				$(rune_casted_selector).removeClass('show').addClass('hide').fadeOut('slow');
+			}
+
+			// now that we have turned them off, lets null out the whole thing
+			casted_runes = new Array();
+		}
+			
+		if (active_rune != null) {
+			var active_rune_selector = "#" + active_rune;
+			$(active_rune_selector).removeClass('show').addClass('hide').fadeOut('slow');
+		}
+		$("#nav_large_screen").removeClass('show').addClass('hide').fadeOut('slow');
 		cast_rune();
+		rune_casted = true;
+	});
+
+	// display the nav and the first rune (fehu)
+	$("#explore_button").click(function() {
+		if (rune_casted) {
+			// now need to loop through and remove 
+			for (var i = 0; i < casted_runes.length; i++) {
+				var rune_casted_selector = "#" + casted_runes[i];
+				$(rune_casted_selector).removeClass('show').addClass('hide').fadeOut('slow');
+			}
+		}
+			
+		$("#fehu").removeClass('hide').addClass('show').fadeIn('slow');
+		$("#nav_large_screen").removeClass('hide').addClass('show').fadeIn('slow');
 	});
 });	
 
@@ -911,6 +942,7 @@ function cast_rune() {
 		var next_rune_selector = "#" + runes[random_number];
 		$(active_rune_selector).removeClass('show').addClass('hide').fadeOut('slow');
 		$(next_rune_selector).removeClass('hide').addClass('show').fadeIn('slow');
+		casted_runes.push(runes[random_number]);
 	}	
 
 }

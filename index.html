@@ -13,14 +13,12 @@
 <body>
 <h1>Runeapp</h1>
 
-<div id="cast" class="hide">
-	<canvas id="cast1"></canvas>
-	<canvas id="cast2"></canvas>
-	<canvas id="cast3"></canvas>
+<div id="choice">
+	<a href="#explore" id="explore_button">explore</a>
+	<a href="#cast" id="cast_button">cast</a>
 </div>
 
-
-<div id="fehu" class="show details">
+<div id="fehu" class="hide details">
 	<h2>Fehu</h2>
 	<div class="details_container">
 		<canvas id="fehu_canvas"></canvas>
@@ -220,12 +218,9 @@
         </ul>
 </div><!-- end of othala-->
 
-<div id="cast_form">
-	<a href="#cast" id="cast_button">cast</a>
-</div>
 
 <!-- navigation -->
-<div id="nav_large_screen">
+<div id="nav_large_screen" class="hide">
 	<ul>
 		<li>
 			<canvas data-name="fehu" class="button_canvas" id="fehu_button"></canvas>
