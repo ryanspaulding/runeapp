@@ -11,21 +11,34 @@
 	<link rel="stylesheet" href="css/common.css" type="text/css" />
 </head>
 <body>
-<div id="fehu" class="show">
+<h1>Runeapp</h1>
+
+<div id="cast" class="hide">
+	<canvas id="cast1"></canvas>
+	<canvas id="cast2"></canvas>
+	<canvas id="cast3"></canvas>
+</div>
+
+
+<div id="fehu" class="show details">
 	<h2>Fehu</h2>
-	<canvas id="fehu_canvas"></canvas>
-	 <ul>   
-         	<li>wealth</li>
-                <li>cattle</li>
-        </ul>
+	<div class="details_container">
+		<canvas id="fehu_canvas"></canvas>
+	 	<ul>   
+         		<li>wealth</li>
+                	<li>cattle</li>
+        	</ul>
+	</div>
 </div><!-- end of fehu -->
 
-<div id="uruz" class="hide">
+<div id="uruz" class="hide details">
 	<h2>Uruz</h2>
-	<canvas id="uruz_canvas"></canvas>
-	 <ul>   
-         	<li>ox</li>
-        </ul>
+		<div class="details_container">
+		<canvas id="uruz_canvas"></canvas>
+	 	<ul>   
+         		<li>ox</li>
+        	</ul>
+	</div>
 </div><!-- end of uruz -->
 
 <div id="thurisaz" class="hide">
@@ -206,6 +219,10 @@
          	<li>home</li>
         </ul>
 </div><!-- end of othala-->
+
+<div id="cast_form">
+	<a href="#cast" id="cast_button">cast</a>
+</div>
 
 <!-- navigation -->
 <div id="nav_large_screen">

@@ -1,6 +1,8 @@
 
 var debug = true;
 var active_rune = null;
+var rune_casted = false;
+var runes = new Array('fehu', 'uruz', 'thurisaz', 'ansuz', 'raidho', 'kenaz', 'gebo', 'wunjo', 'hagalaz', 'naudhiz', 'isa', 'jera', 'eihwaz', 'perthro', 'elhaz', 'sowilo', 'tiwaz', 'berkano', 'ehwaz', 'mannaz', 'laguz', 'ingwaz', 'dagaz', 'othala');
 
 
 /*
@@ -835,7 +837,83 @@ $(document).ready(function() {
 	$(".button_link").click(function() {
 		move_rune(this);
 	});
+
+	// button for casting 
+	$("#cast_button").click(function() {
+		cast_rune();
+	});
 });	
+
+function cast_rune() {
+
+	for (var i = 0; i < 3; i++) {
+		// randomly display three runes..
+		var random_number = Math.floor(Math.random() * (23 - 0 + 1)) + 0;
+	
+		if (window.console && debug) {
+			console.log("random #: " + runes[random_number]);
+		}
+		
+		// build the rune on the canvas
+		// need to find a better way then a huge if/else block to solve this 
+		if (runes[random_number] == 'fehu') {
+			build_fehu();
+		} else if (runes[random_number] == 'uruz') {
+			build_uruz();
+		} else if (runes[random_number] == 'thurisaz') {
+			build_thurisaz();
+		} else if (runes[random_number] == 'ansuz') {
+			build_ansuz();
+		} else if (runes[random_number] == 'raidho') {
+			build_raidho();
+		} else if (runes[random_number] == 'kenaz') {
+			build_kenaz();
+		} else if (runes[random_number] == 'gebo') {
+			build_gebo();
+		} else if (runes[random_number] == 'wunjo') {
+			build_wunjo();
+		} else if (runes[random_number] == 'hagalaz') {
+			build_hagalaz();
+		} else if (runes[random_number] == 'naudhiz') {
+			build_naudhiz();
+		} else if (runes[random_number] == 'isa') {
+			build_isa();
+		} else if (runes[random_number] == 'jera') {
+			build_jera();
+		} else if (runes[random_number] == 'eihwaz') {
+			build_eihwaz();
+		} else if (runes[random_number] == 'perthro') {
+			build_perthro();
+		} else if (runes[random_number] == 'elhaz') {
+			build_elhaz();
+		} else if (runes[random_number] == 'sowilo') {
+			build_sowilo();
+		} else if (runes[random_number] == 'tiwaz') {
+			build_tiwaz();
+		} else if (runes[random_number] == 'berkano') {
+			build_berkano();
+		} else if (runes[random_number] == 'ehwaz') {
+			build_ehwaz();
+		} else if (runes[random_number] == 'mannaz') {
+			build_mannaz();
+		} else if (runes[random_number] == 'laguz') {
+			build_laguz();
+		} else if (runes[random_number] == 'ingwaz') {
+			build_ingwaz();
+		} else if (runes[random_number] == 'dagaz') {
+			build_dagaz();
+		} else if (runes[random_number] == 'othala') {
+			build_othala();
+		} // no else 
+
+		
+		var active_rune_selector = "#" + active_rune;
+		var next_rune_selector = "#" + runes[random_number];
+		$(active_rune_selector).removeClass('show').addClass('hide').fadeOut('slow');
+		$(next_rune_selector).removeClass('hide').addClass('show').fadeIn('slow');
+	}	
+
+}
 
 function move_rune(rune) {
 		var rune_name = $(rune).data('name');
@@ -906,5 +984,5 @@ function move_rune(rune) {
 		// let the rest of the app know who the active rune is
 		active_rune = rune_name;
 }
-	
+
 

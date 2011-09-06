@@ -1,10 +1,23 @@
+body {
+	background-color: #333366;
+	font-family: monospace;
+}
+
+h1 {
+	font-family: monospace;
+	color: #fff;
+	size: 40pt;
+	text-align: center;
+}
 
 div canvas {
 	background-image: url("../images/wood.jpeg");
-	border: 1px solid black;
 	/* testing some % stuff */
-	width: 50%;
-	height: 50%;
+	width: 35%;
+	height: 40%;
+	border-radius: 35px;
+	-moz-border-radius: 35px;
+	box-shadow: 3px 3px 5px #000;
 }
 
 #rune_container {
@@ -13,16 +26,43 @@ div canvas {
 	height: 50%;
 }
 
-/* 	class to control where the rune details go, for now 
- 	they are just all on top of each other. When clicking we
-	show or hide the one selected.
-*/
 .details {
-	border: 1px solid yellow;
-	position: absolute;
-	width: 50%;
-	height: 50%;
-	display: block;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3em;
+	padding-bottom: 3em;
+	background-color: #b09b86;
+	border-radius: 35px;
+        -moz-border-radius: 35px;
+        box-shadow: 5px 5px 5px #000;
+}
+
+.details_container {
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	-mox-column-gap: 20px;
+	-webkit-column-gap: 20px;
+	
+}
+
+.details_container canvas {
+	margin-left: 5em;
+	margin-right: auto;
+	-moz-border-radius: 8em;
+	border-radius: 8em;
+	width: 14em;
+	height: 14em;
+	border: 3px solid black;
+}
+
+.details h2 {
+	text-align: center;
+	font-size: 3em;
+}
+
+.details ul {
+	font-size: 2em;
 }
 
 .button_canvas {
@@ -47,13 +87,34 @@ div canvas {
 	display: block;
 }
 
+.float_right {
+	float: right;
+}
+
 #nav_large_screen {
-	-moz-column-width: 150px;
-	-webkit-column-width: 150px;	
+	-moz-column-width: 100px;
+	-webkit-column-width: 100px;	
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
 	
 }
 
 #nav_large_screen ul li {
-	width: 5em;
+	width: 2.5em;
 	text-align: center;
+	font-family: monospace;
+}
+
+#nav_large_screen ul li a:link, #nav_large_screen ul li a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+#nav_large_screen ul {
+	list-style-type: none;
+}
+
+#nav_large_screen ul li canvas {
+	width: 100%;
 }
