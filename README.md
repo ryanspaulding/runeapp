@@ -1,4 +1,5 @@
-# Rune App -- a web based app to show information about the Furthark (Runes). This app was designed for the iPhone but works great on the iPad, and computer screens. The goal of this project is to support N devices and look and feel like a native app with HTML and CSS markup! Also to have a way for me to study the runes where ever I am. 
+# Runeapp 
+A web based app to show information about the Furthark (Runes). This app was designed for the iPhone but works great on the iPad, and computer screens. The goal of this project is to support N devices and look and feel like a native app with HTML and CSS markup! Also to have a way for me to study the runes where ever I am. 
 
 
 ## Roadmap
