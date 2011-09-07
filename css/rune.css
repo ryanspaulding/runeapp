@@ -46,12 +46,14 @@ div canvas {
         box-shadow: 5px 5px 5px #000;
 }
 
-.details_container {
-	-moz-column-count: 2;
-	-webkit-column-count: 2;
-	-mox-column-gap: 20px;
-	-webkit-column-gap: 20px;
-	
+@media screen and (min-width: 600px) {
+	.details_container {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		-mox-column-gap: 20px;
+		-webkit-column-gap: 20px;
+		
+	}
 }
 
 .details_container canvas {
@@ -105,13 +107,28 @@ div canvas {
 	width: 90%;
 	margin-right: auto;
 	margin-left: auto;
+	display: none;
 	
 }
 
 #nav_large_screen ul li {
 	width: 2.5em;
 	text-align: center;
-	font-family: monospace;
+	font-family: monospace;	
+}
+
+/* 	don't want to write js to detect smartphones so don't display the stuff in the div 
+ 	since the nav_large_screen is getting displayed via js 
+*/
+@media screen and (device-height: 480px) and (device-width: 320px) and (orientation: portrait) {
+	#nav_large_screen ul {
+		display: none;
+	}
+}
+@media screen and (device-height: 480px) and (device-width: 320px) and (orientation: landscape) {
+	#nav_large_screen ul {
+		display: none;
+	}
 }
 
 #nav_large_screen ul li a:link, #nav_large_screen ul li a:visited {
