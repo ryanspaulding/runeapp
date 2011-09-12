@@ -1,6 +1,20 @@
 body {
 	background-color: #333366;
 	font-family: monospace;
+	color: #fff;
+	/* below testing for goldilocks */
+	border: 1px solid yellow;
+	max-width: 30em; /* single column */
+	padding: 0 0.809em;
+	margin: auto;
+}
+
+@media screen and (min-width: 36.236em) { 
+	body {
+		max-width: 50.618em; /* multi-column */
+		padding: 0 1.618em;
+		border: 1px solid red;
+	}
 }
 
 h1 {
