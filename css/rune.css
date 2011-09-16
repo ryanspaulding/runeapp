@@ -160,7 +160,7 @@ div.table_cell_small {
 }
 
 div.table_cell_right {
-	padding-left: 45%;
+	padding-left: 30%;
 }
 
 div.table_cell_left {
@@ -201,7 +201,7 @@ div.nav_small_screen {
 	}
 
 	.details_container canvas {
-		margin-left: 5em;
+		margin-left: 12%;
 	}
 	
 	.details_container ul {
