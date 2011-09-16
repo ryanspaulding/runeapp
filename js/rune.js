@@ -785,9 +785,11 @@ function draw_line(canvas) {
 
 
 
+/*
 $(window).resize(function() {	
 	build_eihwaz();
 });
+*/
 
 $(document).ready(function() {
 
@@ -857,7 +859,7 @@ $(document).ready(function() {
 			var active_rune_selector = "#" + active_rune;
 			$(active_rune_selector).removeClass('show').addClass('hide').fadeOut('slow');
 		}
-		$("#nav_large_screen").removeClass('show').addClass('hide').fadeOut('slow');
+		$("#nav_large_screen").fadeOut('slow');
 		cast_rune();
 		rune_casted = true;
 	});
@@ -873,9 +875,7 @@ $(document).ready(function() {
 		}
 			
 		$("#fehu").removeClass('hide').addClass('show').fadeIn('slow');
-		console.log("foobar");
 		$("#nav_large_screen").fadeIn('slow');
-		$("#nav_large_screen_table").fadeIn('slow');
 	});
 });	
 
