@@ -804,7 +804,9 @@ $(document).ready(function() {
 
 	/* button setup */
 	build_fehu('fehu_button');
+	build_fehu('fehu_button_small');
 	build_uruz('uruz_button');
+	build_uruz('uruz_button_small');
 	build_thurisaz('thurisaz_button');
 	build_ansuz('ansuz_button');
 	build_raidho('raidho_button');
@@ -871,7 +873,9 @@ $(document).ready(function() {
 		}
 			
 		$("#fehu").removeClass('hide').addClass('show').fadeIn('slow');
-		$("#nav_large_screen").removeClass('hide').addClass('show').fadeIn('slow');
+		console.log("foobar");
+		$("#nav_large_screen").fadeIn('slow');
+		$("#nav_large_screen_table").fadeIn('slow');
 	});
 });	
 

@@ -1,21 +1,15 @@
+/* please check the end of the file for all @media queries */
+
 body {
 	background-color: #333366;
 	font-family: monospace;
 	color: #fff;
 	/* below testing for goldilocks */
-	border: 1px solid yellow;
 	max-width: 30em; /* single column */
 	padding: 0 0.809em;
 	margin: auto;
 }
 
-@media screen and (min-width: 36.236em) { 
-	body {
-		max-width: 50.618em; /* multi-column */
-		padding: 0 1.618em;
-		border: 1px solid red;
-	}
-}
 
 h1 {
 	font-family: monospace;
@@ -24,14 +18,9 @@ h1 {
 	text-align: center;
 }
 
-div canvas {
+canvas {
 	background-image: url("../images/wood.jpeg");
 	/* testing some % stuff */
-	width: 35%;
-	height: 40%;
-	border-radius: 35px;
-	-moz-border-radius: 35px;
-	box-shadow: 3px 3px 5px #000;
 }
 
 /* temp */
@@ -43,7 +32,6 @@ div canvas {
 }
 
 #rune_container {
-	border: 1px solid red;	
 	width: 100%;
 	height: 50%;
 }
@@ -60,23 +48,13 @@ div canvas {
         box-shadow: 5px 5px 5px #000;
 }
 
-@media screen and (min-width: 600px) {
-	.details_container {
-		-moz-column-count: 2;
-		-webkit-column-count: 2;
-		-mox-column-gap: 20px;
-		-webkit-column-gap: 20px;
-		
-	}
-}
-
 .details_container canvas {
-	margin-left: 5em;
+	margin-left: 8%;
 	margin-right: auto;
 	-moz-border-radius: 8em;
 	border-radius: 8em;
-	width: 14em;
-	height: 14em;
+	width: 16em;
+	height: 16em;
 	border: 3px solid black;
 }
 
@@ -116,44 +94,103 @@ div canvas {
 }
 
 #nav_large_screen {
-	-moz-column-width: 100px;
-	-webkit-column-width: 100px;	
-	width: 90%;
 	margin-right: auto;
 	margin-left: auto;
+	margin-bottom: 1em;
 	display: none;
 	
 }
 
-#nav_large_screen ul li {
-	width: 2.5em;
-	text-align: center;
-	font-family: monospace;	
+div.table_cell canvas, div.table_cell_small canvas {
+	width: 4em;
+	height: 4em;
+	border-radius: 35px;
+	-moz-border-radius: 35px;
+	box-shadow: 3px 3px 5px #000;
 }
 
-/* 	don't want to write js to detect smartphones so don't display the stuff in the div 
- 	since the nav_large_screen is getting displayed via js 
-*/
-@media screen and (device-height: 480px) and (device-width: 320px) and (orientation: portrait) {
-	#nav_large_screen ul {
-		display: none;
-	}
-}
-@media screen and (device-height: 480px) and (device-width: 320px) and (orientation: landscape) {
-	#nav_large_screen ul {
-		display: none;
-	}
-}
-
-#nav_large_screen ul li a:link, #nav_large_screen ul li a:visited {
+div.table_cell a:link, div.table_cell a:visited {
 	text-decoration: none;
 	color: white;
-}
-
-#nav_large_screen ul {
-	list-style-type: none;
-}
-
-#nav_large_screen ul li canvas {
+	/* get the text to center under the canvas buttons */
+	display: block;
+	text-align: center;
 	width: 100%;
+}
+
+div.table_cell_small a:link, div.table_cell_small a:visited {
+	text-decoration: none;
+	color: white;
+	display: block;
+	width: 100%;
+}
+
+div.table_cell_left a:link, div.table_cell_left a:visited {
+	padding-left: 2em;
+}
+
+div.table_cell_right a:link, div.table_cell_right a:visited {
+	padding-left: 65%;
+}
+
+
+div.table_row {
+	display: table-row;
+}	
+
+div.table_cell {
+	display: table-cell;
+	width: 6em; /* max-width / 8 columns */
+	height: 5em;
+	padding-left: 1em;
+	padding-right: .5em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+div.table_cell_small {
+	display: table-cell;
+	width: 6em; 
+	height: 5em;
+	border: 1px solid blue;
+}
+
+
+.nav_small_screen {
+	display: none;
+}
+
+#nav_large_screen_table {
+	display: table;
+	width: 100%;
+}
+
+/* multi-column, i.e. just right and larger */
+@media screen and (min-width: 36.236em) { 
+	body {
+		max-width: 50.618em; /* multi-column */
+		padding: 0 1.618em;
+	}
+	
+	.details_container {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		-mox-column-gap: 20px;
+		-webkit-column-gap: 20px;
+	}
+
+
+}
+
+/* small screen (smart phones, etc) */
+@media screen and (max-width: 34em) {
+	/*
+	#nav_large_screen_table {
+		display: none;
+	}
+	*/
+	div.nav_small_screen {
+		display: table;
+		width: 100%;
+	}
 }
