@@ -8,6 +8,7 @@ body {
 	max-width: 30em; /* single column */
 	padding: 0 0.809em;
 	margin: auto;
+	border: 1px solid yellow;
 }
 
 
@@ -207,4 +208,65 @@ div.nav_small_screen {
 	.details_container ul {
 		margin-left: 1em;
 	}
+}
+
+/* small screen (smart phones, etc)  and landscape mode */
+@media screen and (max-width: 36em) and (orientation: landscape) {
+
+	body {
+		border: 1px solid green;
+		max-width: 36em;
+	}
+
+	/* details */
+	.details {
+		width: 100%;
+	}	
+
+	.details h2 {
+		font-size: 2em;
+		margin-bottom: 0;
+	}
+
+	.details ul {
+		font-size: 1.5em;
+	}
+		
+
+	.details_container {
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                -mox-column-gap: 20px;
+                -webkit-column-gap: 20px;
+        }
+
+
+	/* details_container canvas */
+	.details_container canvas {
+		-moz-border-radius: 8em;
+       	 	border-radius: 8em;
+        	width: 10em;
+       	 	height: 10em;
+        	border: 3px solid black
+	}
+
+
+	/* nav_small_screen */
+	.nav_small_screen {
+		margin-bottom: 0;
+		margin-top: 1em;
+	}
+
+	div.table_cell_right {
+        	padding-left: 40%;
+	}
+
+	div.table_cell_left {
+        	padding-left: 5em;
+	}
+
+	div.table_cell_right a:link, div.table_cell_right a:visited {
+        	padding-left: 10%;
+	}
+
 }
