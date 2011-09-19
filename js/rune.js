@@ -888,6 +888,12 @@ $(document).ready(function() {
 		move_rune(this);
 	});
 
+	// precast sets the user up so they can do a good cast 
+	$("#pre_cast_button").click(function() {
+		$("#what_are_runes").fadeOut('slow');
+		$("#how_to_cast").fadeIn('slow');
+	});
+
 	// button for casting 
 	$("#cast_button").click(function() {
 		if (rune_casted) {
@@ -920,6 +926,7 @@ $(document).ready(function() {
 			}
 		}
 			
+		$("#what_are_runes").fadeOut('slow');
 		$("#fehu").removeClass('hide').addClass('show').fadeIn('slow');
 		$("#nav_large_screen").fadeIn('slow');
 	});

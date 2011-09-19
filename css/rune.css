@@ -25,11 +25,47 @@ canvas {
 }
 
 /* temp */
-#choice {
+#choice, #how_to_cast {
 	text-align: center;
+	margin-bottom: 2em;
 }
-#choice a:link, #choice a:visited {
+#choice a:link, #choice a:visited, #how_to_cast a:link, #how_to_cast a:visited {
+	display: block;
+	width: 47%;
+	height: 2em;
+	background-color: #336633;
 	color: white;
+	text-decoration: none;
+	border-radius: 35px;
+        -moz-border-radius: 35px;
+        box-shadow: 5px 5px 5px #000;
+	padding-top: .5em;
+}
+
+#choice a:hover, #how_to_cas a:hover {
+	box-shadow: 5px 5px 5px #fff;
+}	
+
+#how_to_cast {
+	display: none;
+}
+
+#how_to_cast a {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#pre_cast_button {
+	float: right;
+	margin-left: 1em;
+}
+
+#explore_button {
+	margin-right: 1em;
+}
+
+#what_are_runes {
+	text-align: center;
 }
 
 #rune_container {
