@@ -42,8 +42,8 @@ canvas {
 	padding-top: .5em;
 }
 
-#choice a:hover, #how_to_cas a:hover {
-	box-shadow: 5px 5px 5px #fff;
+#choice a:hover, #how_to_cast a:hover {
+	box-shadow: 3px 3px 3px #fff;
 }	
 
 #how_to_cast {
