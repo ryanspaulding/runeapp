@@ -20,7 +20,8 @@ h1 {
 }
 
 canvas {
-	background-image: url("../images/wood.jpeg");
+	/* background-image: url("../images/wood.jpeg");*/
+	background-color: #663300;
 	/* testing some % stuff */
 }
 

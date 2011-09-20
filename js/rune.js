@@ -891,6 +891,11 @@ $(document).ready(function() {
 	// precast sets the user up so they can do a good cast 
 	$("#pre_cast_button").click(function() {
 		$("#what_are_runes").fadeOut('slow');
+		$("#nav_large_screen").fadeOut('slow');
+		if (active_rune != null) {
+			var active_rune_selector = "#" + active_rune;
+			$(active_rune_selector).removeClass('show').addClass('hide').fadeOut('slow');
+		}
 		$("#how_to_cast").fadeIn('slow');
 	});
 
@@ -924,6 +929,8 @@ $(document).ready(function() {
 				var rune_casted_selector = "#" + casted_runes[i];
 				$(rune_casted_selector).removeClass('show').addClass('hide').fadeOut('slow');
 			}
+			$(".nav_small_screen").attr("style", "");
+			$("#how_to_cast").fadeOut('slow');
 		}
 			
 		$("#what_are_runes").fadeOut('slow');
@@ -999,6 +1006,8 @@ function cast_rune() {
 		var next_rune_selector = "#" + runes[random_number];
 		$(active_rune_selector).removeClass('show').addClass('hide').fadeOut('slow');
 		$(next_rune_selector).removeClass('hide').addClass('show').fadeIn('slow');
+		// need to make sure the nav for small screens stays hidden
+		$(".nav_small_screen").css("display", "none");
 		casted_runes.push(runes[random_number]);
 	}	
 
