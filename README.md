@@ -11,11 +11,15 @@ A web based app to show information about the Furthark (Runes). This app was des
 - swipe gestures
 - images of each rune w/ names
 
+### 1.5
+- start from scratch and make site responsive 
+- make it all files under 10k zipped 
+- draw all runes using canvas and javascript 
+- add casting of runes  
 
 ### 2.0  
 - descriptions 
 - change descriptions with local storage
-- better images or maybe a way to select different runes. Like default, brushed metal, etc
 
 
 
