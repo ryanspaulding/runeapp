@@ -8,7 +8,6 @@ body {
 	max-width: 30em; /* single column */
 	padding: 0 0.809em;
 	margin: auto;
-	border: 1px solid yellow;
 }
 
 
@@ -93,6 +92,7 @@ canvas {
 	border-radius: 8em;
 	width: 16em;
 	height: 16em;
+	box-shadow: 5px 5px 5px #000;
 	border: 3px solid black;
 }
 
@@ -251,7 +251,6 @@ div.nav_small_screen {
 @media screen and (max-width: 36em) and (orientation: landscape) {
 
 	body {
-		border: 1px solid green;
 		max-width: 36em;
 	}
 
