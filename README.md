@@ -11,7 +11,7 @@ A web based app to show information about the Furthark (Runes). This app was des
 - swipe gestures
 - images of each rune w/ names
 
-### 1.5
+### 1.5 (branch code name: 10k)
 - start from scratch and make site responsive 
 - make it all files under 10k zipped 
 - draw all runes using canvas and javascript 
