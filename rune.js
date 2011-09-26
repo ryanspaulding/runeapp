@@ -1004,8 +1004,10 @@ function cast_rune() {
 		
 		var active_rune_selector = "#" + active_rune;
 		var next_rune_selector = "#" + runes[random_number];
-		$(active_rune_selector).removeClass('show').addClass('hide').fadeOut('slow');
-		$(next_rune_selector).removeClass('hide').addClass('show').fadeIn('slow');
+		$(active_rune_selector).removeClass('show').addClass('hide');
+		$(next_rune_selector).removeClass('hide').addClass('show');
+		//$(next_rune_selector + ">div").removeClass('details_container').addClass('details_container_casting');;
+		//$(next_rune_selector).removeClass('details').addClass('details_casting');
 		// need to make sure the nav for small screens stays hidden
 		$(".nav_small_screen").css("display", "none");
 		casted_runes.push(runes[random_number]);

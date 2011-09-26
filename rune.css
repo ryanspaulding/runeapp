@@ -73,8 +73,9 @@ canvas {
 	height: 50%;
 }
 
+/* for explore flow */
 .details {
-	width: 90%;
+	width: 80.244181911573%; /* 40.618 / 50.618 * 100 = 80.244181911573 */
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 3em;
@@ -83,6 +84,10 @@ canvas {
 	border-radius: 35px;
         -moz-border-radius: 35px;
         box-shadow: 5px 5px 5px #000;
+}
+
+.details_container {
+	width: 100%;
 }
 
 .details_container canvas {
@@ -103,6 +108,45 @@ canvas {
 
 .details ul {
 	font-size: 2em;
+}
+
+/* for casting flow */
+.details_casting {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3em;
+	background-color: #b09b86;
+	border-radius: 35px;
+        -moz-border-radius: 35px;
+        box-shadow: 5px 5px 5px #000;
+	height: 10%;
+	border: 1px solid red;
+	
+}
+
+.details_container_casting {
+	border: 1px solid blue;
+}
+
+.details_casting canvas {
+	width: 6em;
+        height: 6em;
+        box-shadow: 5px 5px 5px #000;
+        border: 3px solid black;
+	
+}
+
+.details_casting h2 {
+	text-align: center;
+	font-size: 2em;
+        border: 3px solid black;
+	margin: 0;
+
+}
+
+.details_casting ul {
+
 }
 
 .button_canvas {
@@ -238,6 +282,7 @@ div.nav_small_screen {
 		width: 100%;
 	}
 
+	/* for explore flow */
 	.details_container canvas {
 		margin-left: 12%;
 	}
@@ -254,6 +299,7 @@ div.nav_small_screen {
 		max-width: 36em;
 	}
 
+	/* for explore flow */
 	/* details */
 	.details {
 		width: 100%;
