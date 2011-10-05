@@ -5,16 +5,13 @@ body {
 	font-family: monospace;
 	color: #fff;
 	/* below testing for goldilocks */
-	max-width: 30em; /* single column */
-	padding: 0 0.809em;
-	margin: auto;
 }
 
 
 h1 {
 	font-family: monospace;
 	color: #fff;
-	size: 40pt;
+	font-size: 45pt;
 	text-align: center;
 }
 
@@ -24,11 +21,32 @@ canvas {
 	/* testing some % stuff */
 }
 
-/* temp */
+#container {
+	width: 90%;
+	background-color: #333366;
+	width: 90%;; /* single column */
+	padding: 0.809em 0.809em;
+	margin: 36px auto; /* center and drop it down 36px; */
+}
+
+#headline {
+	width: 90%;
+	padding: 0;
+	margin: 1em auto; /* center and drop it down 36px; */
+}
+
+
+#choice, #how_to_cast, #what_are_runes, .details, .details_casting, #nav_large_screen, #nav_large_screen_table, #footer  {
+	width: 93.75%; /* 900 / 960 = 0.9375 * 100 = 93.75 */
+}
+
 #choice, #how_to_cast {
 	text-align: center;
 	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
 }
+
 #choice a:link, #choice a:visited, #how_to_cast a:link, #how_to_cast a:visited {
 	display: block;
 	width: 47%;
@@ -66,6 +84,18 @@ canvas {
 
 #what_are_runes {
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footer {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footer a:link, #footer a:visited {
+	color: #fff;
 }
 
 #rune_container {
@@ -74,8 +104,8 @@ canvas {
 }
 
 /* for explore flow */
+/* width: 900px; */
 .details {
-	width: 80.244181911573%; /* 40.618 / 50.618 * 100 = 80.244181911573 */
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 3em;
@@ -91,12 +121,12 @@ canvas {
 }
 
 .details_container canvas {
-	margin-left: 8%;
+	margin-left: 20%; 
 	margin-right: auto;
-	-moz-border-radius: 8em;
-	border-radius: 8em;
-	width: 16em;
-	height: 16em;
+	border-radius: 125px;
+        -moz-border-radius: 50px;
+	width: 250px; 
+	height: 250px; /* 400 / 900 * 100 = 44.444444444444*/
 	box-shadow: 5px 5px 5px #000;
 	border: 3px solid black;
 }
@@ -108,11 +138,11 @@ canvas {
 
 .details ul {
 	font-size: 2em;
+	width: 50%; /* 450 / 900 * 100 = 50 */
 }
 
 /* for casting flow */
 .details_casting {
-	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 3em;
@@ -189,12 +219,18 @@ canvas {
 }
 
 div.table_cell canvas, div.table_cell_small canvas {
+	margin-left: 24%;
 	width: 4em;
 	height: 4em;
 	border-radius: 35px;
 	-moz-border-radius: 35px;
 	box-shadow: 3px 3px 5px #000;
 }
+
+div.table_cell canvas:hover, div.table_cell_small canvas:hover {
+	box-shadow: 3px 3px 5px #fff;
+}
+	
 
 div.table_cell a:link, div.table_cell a:visited {
 	text-decoration: none;
@@ -255,12 +291,9 @@ div.nav_small_screen {
 
 
 /* multi-column, i.e. just right and larger */
-@media screen and (min-width: 36.236em) { 
-	body {
-		max-width: 50.618em; /* multi-column */
-		padding: 0 1.618em;
-	}
-	
+/* ipad in ladscape mode */
+@media screen and (min-width: 768px) { 
+
 	.details_container {
 		-moz-column-count: 2;
 		-webkit-column-count: 2;
@@ -272,7 +305,7 @@ div.nav_small_screen {
 }
 
 /* small screen (smart phones, etc) */
-@media screen and (max-width: 36em) {
+@media screen and (max-width: 520px) {
 	#nav_large_screen_table {
 		display: none;
 	}
@@ -298,12 +331,6 @@ div.nav_small_screen {
 	body {
 		max-width: 36em;
 	}
-
-	/* for explore flow */
-	/* details */
-	.details {
-		width: 100%;
-	}	
 
 	.details h2 {
 		font-size: 2em;
