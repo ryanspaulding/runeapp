@@ -1,0 +1,381 @@
+/* please check the end of the file for all @media queries */
+
+body {
+	background-color: #333366;
+	font-family: monospace;
+	color: #fff;
+	/* below testing for goldilocks */
+}
+
+
+h1 {
+	font-family: monospace;
+	color: #fff;
+	font-size: 45pt;
+	text-align: center;
+}
+
+canvas {
+	/* background-image: url("../images/wood.jpeg");*/
+	background-color: #663300;
+	/* testing some % stuff */
+}
+
+#container {
+	width: 90%;
+	background-color: #333366;
+	width: 90%;; /* single column */
+	padding: 0.809em 0.809em;
+	margin: 36px auto; /* center and drop it down 36px; */
+}
+
+#headline {
+	width: 90%;
+	padding: 0;
+	margin: 1em auto; /* center and drop it down 36px; */
+}
+
+
+#choice, #how_to_cast, #what_are_runes, .details, .details_casting, #nav_large_screen, #nav_large_screen_table, #footer  {
+	width: 93.75%; /* 900 / 960 = 0.9375 * 100 = 93.75 */
+}
+
+#choice, #how_to_cast {
+	text-align: center;
+	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#choice a:link, #choice a:visited, #how_to_cast a:link, #how_to_cast a:visited {
+	display: block;
+	width: 47%;
+	height: 2em;
+	background-color: #336633;
+	color: white;
+	text-decoration: none;
+	border-radius: 35px;
+        -moz-border-radius: 35px;
+        box-shadow: 5px 5px 5px #000;
+	padding-top: .5em;
+}
+
+#choice a:hover, #how_to_cast a:hover {
+	box-shadow: 3px 3px 3px #fff;
+}	
+
+#how_to_cast {
+	display: none;
+}
+
+#how_to_cast a {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#pre_cast_button {
+	float: right;
+	margin-left: 1em;
+}
+
+#explore_button {
+	margin-right: 1em;
+}
+
+#what_are_runes {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footer {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footer a:link, #footer a:visited {
+	color: #fff;
+}
+
+#rune_container {
+	width: 100%;
+	height: 50%;
+}
+
+/* for explore flow */
+/* width: 900px; */
+.details {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3em;
+	padding-bottom: 3em;
+	background-color: #b09b86;
+	border-radius: 35px;
+        -moz-border-radius: 35px;
+        box-shadow: 5px 5px 5px #000;
+}
+
+.details_container {
+	width: 100%;
+}
+
+.details_container canvas {
+	margin-left: 20%; 
+	margin-right: auto;
+	border-radius: 125px;
+        -moz-border-radius: 50px;
+	width: 250px; 
+	height: 250px; /* 400 / 900 * 100 = 44.444444444444*/
+	box-shadow: 5px 5px 5px #000;
+	border: 3px solid black;
+}
+
+.details h2 {
+	text-align: center;
+	font-size: 3em;
+}
+
+.details ul {
+	font-size: 2em;
+	width: 50%; /* 450 / 900 * 100 = 50 */
+}
+
+/* for casting flow */
+.details_casting {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 3em;
+	background-color: #b09b86;
+	border-radius: 35px;
+        -moz-border-radius: 35px;
+        box-shadow: 5px 5px 5px #000;
+	height: 10%;
+	border: 1px solid red;
+	
+}
+
+.details_container_casting {
+	border: 1px solid blue;
+}
+
+.details_casting canvas {
+	width: 6em;
+        height: 6em;
+        box-shadow: 5px 5px 5px #000;
+        border: 3px solid black;
+	
+}
+
+.details_casting h2 {
+	text-align: center;
+	font-size: 2em;
+        border: 3px solid black;
+	margin: 0;
+
+}
+
+.details_casting ul {
+
+}
+
+.button_canvas {
+	width: 2.5em;
+	height: 2.5em;
+	border: 1px solid black;
+}
+
+.button_link {
+	width: 5em;
+}
+
+.align-right {
+	text-align: right;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.float_right {
+	float: right;
+}
+
+#nav_large_screen_table {
+	display: table;
+	width: 100%;
+}
+
+#nav_large_screen {
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 1em;
+	display: none;
+	
+}
+
+div.table_cell canvas, div.table_cell_small canvas {
+	margin-left: 24%;
+	width: 4em;
+	height: 4em;
+	border-radius: 35px;
+	-moz-border-radius: 35px;
+	box-shadow: 3px 3px 5px #000;
+}
+
+div.table_cell canvas:hover, div.table_cell_small canvas:hover {
+	box-shadow: 3px 3px 5px #fff;
+}
+	
+
+div.table_cell a:link, div.table_cell a:visited {
+	text-decoration: none;
+	color: white;
+	/* get the text to center under the canvas buttons */
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+div.table_cell_small a:link, div.table_cell_small a:visited {
+	text-decoration: none;
+	color: white;
+	display: block;
+	width: 100%;
+}
+
+div.table_cell_left a:link, div.table_cell_left a:visited {
+	padding-left: 1em;
+}
+
+div.table_cell_right a:link, div.table_cell_right a:visited {
+	padding-left: 20%;
+}
+
+
+div.table_row {
+	display: table-row;
+}	
+
+div.table_cell {
+	display: table-cell;
+	width: 6em; /* max-width / 8 columns */
+	height: 5em;
+	padding-left: 1em;
+	padding-right: .5em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+div.table_cell_small {
+	display: table-cell;
+	width: 6em; 
+	height: 5em;
+}
+
+div.table_cell_right {
+	padding-left: 30%;
+}
+
+div.table_cell_left {
+	padding-left: 2em;
+}
+
+div.nav_small_screen {
+	display: none;
+}
+
+
+/* multi-column, i.e. just right and larger */
+/* ipad in ladscape mode */
+@media screen and (min-width: 768px) { 
+
+	.details_container {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		-mox-column-gap: 20px;
+		-webkit-column-gap: 20px;
+	}
+
+
+}
+
+/* small screen (smart phones, etc) */
+@media screen and (max-width: 520px) {
+	#nav_large_screen_table {
+		display: none;
+	}
+
+	div.nav_small_screen {
+		display: table;
+		width: 100%;
+	}
+
+	/* for explore flow */
+	.details_container canvas {
+		margin-left: 12%;
+	}
+	
+	.details_container ul {
+		margin-left: 1em;
+	}
+}
+
+/* small screen (smart phones, etc)  and landscape mode */
+@media screen and (max-width: 36em) and (orientation: landscape) {
+
+	body {
+		max-width: 36em;
+	}
+
+	.details h2 {
+		font-size: 2em;
+		margin-bottom: 0;
+	}
+
+	.details ul {
+		font-size: 1.5em;
+	}
+		
+
+	.details_container {
+                -moz-column-count: 2;
+                -webkit-column-count: 2;
+                -mox-column-gap: 20px;
+                -webkit-column-gap: 20px;
+        }
+
+
+	/* details_container canvas */
+	.details_container canvas {
+		-moz-border-radius: 8em;
+       	 	border-radius: 8em;
+        	width: 10em;
+       	 	height: 10em;
+        	border: 3px solid black
+	}
+
+
+	/* nav_small_screen */
+	.nav_small_screen {
+		margin-bottom: 0;
+		margin-top: 1em;
+	}
+
+	div.table_cell_right {
+        	padding-left: 40%;
+	}
+
+	div.table_cell_left {
+        	padding-left: 5em;
+	}
+
+	div.table_cell_right a:link, div.table_cell_right a:visited {
+        	padding-left: 10%;
+	}
+
+}

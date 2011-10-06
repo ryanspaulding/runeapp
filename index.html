@@ -5,701 +5,695 @@
 	<meta charset="utf-8" />
 	<title>RuneApp Phone</title>
 	<meta name="author" content="Ryan Spaulding">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<!-- Date: 2011-01-09 -->
-	<script language="javascript" src="js/jquery-1.4.4.min.js"></script>
-	<script language="javascript" src="js/jquery.mobile-1.0a2.min.js"></script>
-	<script language="javascript" src="js/rune.js"></script>
-	<script language="javascript" src="js/phone.js"></script>
-	<script language="javascript" src="js/rune.js"></script>
-	
-	<link rel="stylesheet" href="css/jquery.mobile-1.0a2.min.css" type="text/css" />
-	<link rel="stylesheet" href="css/common.css" type="text/css" />
-	<link rel="stylesheet" media="screen and (max-device-width: 480px) and (orientation: landscape)" href="css/phone-landscape.css" type="text/css" />
-		<link rel="stylesheet" media="screen and (max-device-width: 480px) and (orientation: portrait)" href="css/phone-portrait.css" type="text/css" />
+	<script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script language="javascript" src="rune.js"></script>
+	<link rel="stylesheet" href="rune.css" type="text/css" />
 </head>
 <body>
-<div data-role="page" id="fehu" data-theme="a" >
-	<div data-role="header" id="fehu_header" data-nobackbtn="true">
-		<h1>Fehu</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="fehu_content">
-		
-		<div id="fehu_desc">
-			<ul>
-				<li>wealth</li>
-				<li>cattle</li>
-			</ul>
+
+<div id="headline">
+<h1>Runeapp</h1>
+</div>
+<div id="container">
+<div id="what_are_runes">
+	<h2>What are the runes?</h2>
+	<p>
+	There is more then one set of runes the one presented here is the ancient Norse alphabet the elder Futhark. They have individual meanings. They can be used as an alphabet or casting. They can be used for divination (determining the future) or communicating with a god.
+	</p>
+</div>
+<div id="choice">
+	<a href="#pre_cast" id="pre_cast_button">cast</a>
+	<a href="#explore" id="explore_button">explore</a>
+</div>
+
+<div id="how_to_cast">
+	<h2>Cast</h2>
+	<p>
+		Think of a question.
+	</p>
+	<a href="#cast" id="cast_button">ask the runes</a>
+</div>
+
+<div id="fehu" class="hide details">
+	<h2>Fehu</h2>
+	<div class="details_container">
+		<canvas id="fehu_canvas"></canvas>
+	 	<ul>   
+			<li>portable wealth</li>
+         		<li>wealth</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="othala" class="button_canvas" id="othala_button_small_back"></canvas>
+                                <a data-name="othala"  href="#othala" title="othala" class="button_link">othala</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="uruz" class="button_canvas" id="uruz_button_small_forward"></canvas>
+				<a data-name="uruz" href="#uruz" title="uruz" class="button_link">uruz</a>
+			</div>
 		</div>
-		
-		<div id="fehu_image">
-			<img src="images/phone-fehu.png" alt="fehu" />
-		</div> <!-- end image div -->
-		
-	</div> <!-- end desc div -->
-	
-	
-	
-	<div id="fehu_footer" data-role="footer">
-		<a href="#toc" class="align-center">runes</a>
-		<a href="#uruz" class="align-right">uruz</a>
+	</div>
+</div><!-- end of fehu -->
+
+<div id="uruz" class="hide details">
+	<h2>Uruz</h2>
+	<div class="details_container">
+		<canvas id="uruz_canvas"></canvas>
+	 	<ul>   
+         		<li>ox</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="fehu" class="button_canvas" id="fehu_button_small_back"></canvas>
+                                <a data-name="fehu" href="#fehu" title="fehu" class="button_link">fehu</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="thurisaz" class="button_canvas" id="thurisaz_button_small_forward"></canvas>
+                                <a data-name="thurisaz" href="#thurisaz" title="thurisaz" class="button_link">thurisaz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of uruz -->
+
+<div id="thurisaz" class="hide details">
+	<h2>Thurisaz</h2>
+	<div class="details_container">
+		<canvas id="thurisaz_canvas"></canvas>
+	 	<ul>   
+         		<li>Thor&#39;s rune</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="uruz" class="button_canvas" id="uruz_button_small_back"></canvas>
+				<a data-name="uruz" href="#uruz" title="uruz" class="button_link">uruz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="ansuz" class="button_canvas" id="ansuz_button_small_forward"></canvas>
+                                <a data-name="ansuz" href="#ansuz" title="ansuz" class="button_link">ansuz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of thurisaz -->
+
+<div id="ansuz" class="hide details">
+	<h2>Ansuz</h2>
+	<div class="details_container">
+		<canvas id="ansuz_canvas"></canvas>
+	 	<ul>   
+         		<li>wisdom</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="thurisaz" class="button_canvas" id="thurisaz_button_small_back"></canvas>
+                                <a data-name="thurisaz" href="#thurisaz" title="thurisaz" class="button_link">thurisaz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="raidho" class="button_canvas" id="raidho_button_small_forward"></canvas>
+                                <a data-name="raidho" href="#raidho" title="raidho" class="button_link">raidho</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of ansuz -->
+
+<div id="raidho" class="hide details">
+	<h2>Raidho</h2>
+	<div class="details_container">
+		<canvas id="raidho_canvas"></canvas>
+	 	<ul>   
+         		<li>ride</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="ansuz" class="button_canvas" id="ansuz_button_small_back"></canvas>
+                                <a data-name="ansuz" href="#ansuz" title="ansuz" class="button_link">ansuz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="kenaz" class="button_canvas" id="kenaz_button_small_forward"></canvas>
+                                <a data-name="kenaz" href="#kenaz" title="kenaz" class="button_link">kenaz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of ansuz -->
+
+<div id="kenaz" class="hide details">
+	<h2>Kenaz</h2>
+	<div class="details_container">
+		<canvas id="kenaz_canvas"></canvas>
+	 	<ul>   
+         		<li>torch</li>
+			<li>knowing</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="raidho" class="button_canvas" id="raidho_button_small_back"></canvas>
+                                <a data-name="raidho" href="#raidho" title="raidho" class="button_link">raidho</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="gebo" class="button_canvas" id="gebo_button_small_forward"></canvas>
+                                <a data-name="gebo" href="#gebo" title="gebo" class="button_link">gebo</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of kenaz -->
+
+<div id="gebo" class="hide details">
+	<h2>Gebo</h2>
+	<div class="details_container">
+		<canvas id="gebo_canvas"></canvas>
+	 	<ul>   
+         		<li>gift</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="kenaz" class="button_canvas" id="kenaz_button_small_back"></canvas>
+                                <a data-name="kenaz" href="#kenaz" title="kenaz" class="button_link">kenaz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="wunjo" class="button_canvas" id="wunjo_button_small_forward"></canvas>
+                                <a data-name="wunjo" href="#wunjo" title="wunjo" class="button_link">wunjo</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of gebo -->
+
+<div id="wunjo" class="hide details">
+	<h2>Wunjo</h2>
+	<div class="details_container">
+		<canvas id="wunjo_canvas"></canvas>
+	 	<ul>   
+         		<li>joy</li>
+			<li>happiness</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="gebo" class="button_canvas" id="gebo_button_small_back"></canvas>
+                                <a data-name="gebo" href="#gebo" title="gebo" class="button_link">gebo</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="hagalaz" class="button_canvas" id="hagalaz_button_small_forward"></canvas>
+                                <a data-name="hagalaz" href="#hagalaz" title="hagalaz" class="button_link">hagalaz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of wunjo -->
+
+<div id="hagalaz" class="hide details">
+	<h2>Hagalaz</h2>
+	<div class="details_container">
+		<canvas id="hagalaz_canvas"></canvas>
+		 <ul>   
+         		<li>hail</li>
+			<li>chaos</li>
+			<li>violent change</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="wunjo" class="button_canvas" id="wunjo_button_small_back"></canvas>
+                                <a data-name="wunjo" href="#wunjo" title="wunjo" class="button_link">wunjo</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="naudhiz" class="button_canvas" id="naudhiz_button_small_forward"></canvas>
+                                <a data-name="naudhiz" href="#naudhiz" title="naudhiz" class="button_link">naudhiz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of hagalaz -->
+
+<div id="naudhiz" class="hide details">
+	<h2>Naudhiz</h2>
+	<div class="details_container">
+		<canvas id="naudhiz_canvas"></canvas>
+	 	<ul>   
+         		<li>need</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="hagalaz" class="button_canvas" id="hagalaz_button_small_back"></canvas>
+                                <a data-name="hagalaz" href="#hagalaz" title="hagalaz" class="button_link">hagalaz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="isa" class="button_canvas" id="isa_button_small_forward"></canvas>
+                                <a data-name="isa" href="#isa" title="isa" class="button_link">isa</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of naudhiz -->
+
+<div id="isa" class="hide details">
+	<h2>Isa</h2>
+	<div class="details_container">
+		<canvas id="isa_canvas"></canvas>
+	 	<ul>   
+         		<li>ice</li>
+			<li>cooling off</li>
+			<li>freezing or stopping</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="naudhiz" class="button_canvas" id="naudhiz_button_small_back"></canvas>
+                                <a data-name="naudhiz" href="#naudhiz" title="naudhiz" class="button_link">naudhiz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="jera" class="button_canvas" id="jera_button_small_forward"></canvas>
+                                <a data-name="jera" href="#jera" title="jera" class="button_link">jera</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of isa -->
+
+<div id="jera" class="hide details">
+	<h2>Jera</h2>
+	<div class="details_container">
+		<canvas id="jera_canvas"></canvas>
+	 	<ul>   
+         		<li>cycle of the year</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="isa" class="button_canvas" id="isa_button_small_back"></canvas>
+                                <a data-name="isa" href="#isa" title="isa" class="button_link">isa</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="eihwaz" class="button_canvas" id="eihwaz_button_small_forward"></canvas>
+                                <a data-name="eihwaz" href="#eihwaz" title="eihwaz" class="button_link">eihwaz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of jera-->
+
+<div id="eihwaz" class="hide details">
+	<h2>Eihwaz</h2>
+	<div class="details_container">
+		<canvas id="eihwaz_canvas"></canvas>
+	 	<ul>   
+         		<li>Yew Tree</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="jera" class="button_canvas" id="jera_button_small_back"></canvas>
+                                <a data-name="jera" href="#jera" title="jera" class="button_link">jera</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="perthro" class="button_canvas" id="perthro_button_small_forward"></canvas>
+                                <a data-name="perthro" href="#perthro" title="perthro" class="button_link">perthro</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of eihwaz-->
+
+<div id="perthro" class="hide details">
+	<h2>Perthro</h2>
+	<div class="details_container">
+		<canvas id="perthro_canvas"></canvas>
+	 	<ul>   
+         		<li>cup</li>
+         		<li>womb</li>
+         		<li>game</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="eihwaz" class="button_canvas" id="eihwaz_button_small_back"></canvas>
+                                <a data-name="eihwaz" href="#eihwaz" title="eihwaz" class="button_link">eihwaz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="elhaz" class="button_canvas" id="elhaz_button_small_forward"></canvas>
+                                <a data-name="elhaz" href="#elhaz" title="elhaz" class="button_link">elhaz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of perthro -->
+
+<div id="elhaz" class="hide details">
+	<h2>Elhaz</h2>
+	<div class="details_container">
+		<canvas id="elhaz_canvas"></canvas>
+	 	<ul>   
+         		<li>protection</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="perthro" class="button_canvas" id="perthro_button_small_back"></canvas>
+                                <a data-name="perthro" href="#perthro" title="perthro" class="button_link">perthro</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="sowilo" class="button_canvas" id="sowilo_button_small_forward"></canvas>
+                                <a data-name="sowilo" href="#sowilo" title="sowilo" class="button_link">sowilo</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of elhaz-->
+
+<div id="sowilo" class="hide details">
+	<h2>Sowilo</h2>
+	<div class="details_container">
+		<canvas id="sowilo_canvas"></canvas>
+	 	<ul>   
+         		<li>sun</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="elhaz" class="button_canvas" id="elhaz_button_small_back"></canvas>
+                                <a data-name="elhaz" href="#elhaz" title="elhaz" class="button_link">elhaz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="tiwaz" class="button_canvas" id="tiwaz_button_small_forward"></canvas>
+                                <a data-name="tiwaz" href="#tiwaz" title="tiwaz" class="button_link">tiwaz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of sowilo-->
+
+<div id="tiwaz" class="hide details">
+	<h2>Tiwaz</h2>
+	<div class="details_container">
+		<canvas id="tiwaz_canvas"></canvas>
+	 	<ul>   
+         		<li>Tyr&#39;s rune</li>
+			<li>justice by the book</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="sowilo" class="button_canvas" id="sowilo_button_small_back"></canvas>
+                                <a data-name="sowilo" href="#sowilo" title="sowilo" class="button_link">sowilo</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="berkano" class="button_canvas" id="berkano_button_small_forward"></canvas>
+                                <a data-name="berkano" href="#berkano" title="berkano" class="button_link">berkano</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of tiwaz-->
+
+<div id="berkano" class="hide details">
+	<h2>Berkano</h2>
+	<div class="details_container">
+		<canvas id="berkano_canvas"></canvas>
+	 	<ul>   
+         		<li>Birch Tree</li>
+			<li>birth</li>
+			<li>pregnancy</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="tiwaz" class="button_canvas" id="tiwaz_button_small_back"></canvas>
+                                <a data-name="tiwaz" href="#tiwaz" title="tiwaz" class="button_link">tiwaz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="ehwaz" class="button_canvas" id="ehwaz_button_small_forward"></canvas>
+                                <a data-name="ehwaz" href="#ehwaz" title="ehwaz" class="button_link">ehwaz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of berkano -->
+
+<div id="ehwaz" class="hide details">
+	<h2>Ehwaz</h2>
+	<div class="details_container">
+		<canvas id="ehwaz_canvas"></canvas>
+	 	<ul>   
+         		<li>horse</li>
+			<li>relationship of man and horse
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="berkano" class="button_canvas" id="berkano_button_small_back"></canvas>
+                                <a data-name="berkano" href="#berkano" title="berkano" class="button_link">berkano</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="mannaz" class="button_canvas" id="mannaz_button_small_forward"></canvas>
+                                <a data-name="mannaz" href="#mannaz" title="mannaz" class="button_link">mannaz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of ehwaz-->
+
+<div id="mannaz" class="hide details">
+	<h2>Mannaz</h2>
+	<div class="details_container">
+		<canvas id="mannaz_canvas"></canvas>
+	 	<ul>   
+         		<li>man</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="ehwaz" class="button_canvas" id="ehwaz_button_small_back"></canvas>
+                                <a data-name="ehwaz" href="#ehwaz" title="ehwaz" class="button_link">ehwaz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="laguz" class="button_canvas" id="laguz_button_small_forward"></canvas>
+                                <a data-name="laguz" href="#laguz" title="laguz" class="button_link">laguz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of mannaz -->
+
+<div id="laguz" class="hide details">
+	<h2>Laguz</h2>
+	<div class="details_container">
+		<canvas id="laguz_canvas"></canvas>
+	 	<ul>   
+         		<li>lake</li>
+			<li>water</li>
+			<li>protection from a poison drink</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="mannaz" class="button_canvas" id="mannaz_button_small_back"></canvas>
+                                <a data-name="mannaz" href="#mannaz" title="mannaz" class="button_link">mannaz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="ingwaz" class="button_canvas" id="ingwaz_button_small_forward"></canvas>
+                                <a data-name="ingwaz" href="#ingwaz" title="ingwaz" class="button_link">ingwaz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of laguz -->
+
+<div id="ingwaz" class="hide details">
+	<h2>Ingwaz</h2>
+	<div class="details_container">
+		<canvas id="ingwaz_canvas"></canvas>
+	 	<ul>   
+         		<li>seed</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="laguz" class="button_canvas" id="laguz_button_small_back"></canvas>
+                                <a data-name="laguz" href="#laguz" title="laguz" class="button_link">laguz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="dagaz" class="button_canvas" id="dagaz_button_small_forward"></canvas>
+                                <a data-name="dagaz" href="#dagaz" title="dagaz" class="button_link">dagaz</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of ingwaz -->
+
+<div id="dagaz" class="hide details">
+	<h2>Dagaz</h2>
+	<div class="details_container">
+		<canvas id="dagaz_canvas"></canvas>
+	 	<ul>   
+         		<li>day</li>
+			<li>new beginning</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="ingwaz" class="button_canvas" id="ingwaz_button_small_back"></canvas>
+                                <a data-name="ingwaz" href="#ingwaz" title="ingwaz" class="button_link">ingwaz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="othala" class="button_canvas" id="othala_button_small_forward"></canvas>
+                                <a data-name="othala"  href="#othala" title="othala" class="button_link">othala</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of dagaz-->
+
+<div id="othala" class="hide details">
+	<h2>Othala</h2>
+	<div class="details_container">
+		<canvas id="othala_canvas"></canvas>
+	 	<ul>   
+         		<li>home or property</li>
+        	</ul>
+	</div>
+	<div class="nav_small_screen">
+		<div class="table_row">
+			<div class="table_cell_small table_cell_left">
+				<canvas data-name="dagaz" class="button_canvas" id="dagaz_button_small_back"></canvas>
+                                <a data-name="dagaz" href="#dagaz" title="dagaz" class="button_link">dagaz</a>
+			</div>
+			<div class="table_cell_small table_cell_right">
+				<canvas data-name="fehu" class="button_canvas" id="fehu_button_small_forward"></canvas>
+                                <a data-name="fehu" href="#fehu" title="fehu" class="button_link">fehu</a>
+			</div>
+		</div>
+	</div>
+</div><!-- end of othala-->
+
+
+<!-- navigation -->
+<div id="nav_large_screen">
+	<div id="nav_large_screen_table">
+		<div class="table_row">
+			<div class="table_cell">
+				<canvas data-name="fehu" class="button_canvas" id="fehu_button"></canvas>
+				<a data-name="fehu" href="#fehu" title="fehu" name="fehu_button" class="button_link">fehu</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="uruz" class="button_canvas" id="uruz_button"></canvas>
+				<a data-name="uruz" href="#uruz" title="uruz" name="uruz" class="button_link">uruz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="thurisaz" class="button_canvas" id="thurisaz_button"></canvas>
+				<a data-name="thurisaz" href="#thurisaz" title="thurisaz" name="thurisaz" class="button_link">thurisaz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="ansuz" class="button_canvas" id="ansuz_button"></canvas>
+				<a data-name="ansuz" href="#ansuz" title="ansuz" name="ansuz" class="button_link">ansuz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="raidho" class="button_canvas" id="raidho_button"></canvas>
+				<a data-name="raidho" href="#raidho" title="raidho" name="raidho" class="button_link">raidho</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="kenaz" class="button_canvas" id="kenaz_button"></canvas>
+				<a data-name="kenaz" href="#kenaz" title="kenaz" name="kenaz" class="button_link">kenaz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="gebo" class="button_canvas" id="gebo_button"></canvas>
+				<a data-name="gebo" href="#gebo" title="gebo" name="gebo" class="button_link">gebo</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="wunjo" class="button_canvas" id="wunjo_button"></canvas>
+				<a data-name="wunjo" href="#wunjo" title="wunjo" name="wunjo" class="button_link">wunjo</a>
+			</div>
+		</div>
+		<div class="table_row">
+			<div class="table_cell">
+				<canvas data-name="hagalaz" class="button_canvas" id="hagalaz_button"></canvas>
+				<a data-name="hagalaz" href="#hagalaz" title="hagalaz" name="hagalaz" class="button_link">hagalaz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="naudhiz" class="button_canvas" id="naudhiz_button"></canvas>
+				<a data-name="naudhiz" href="#naudhiz" title="naudhiz" name="naudhiz" class="button_link">naudhiz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="isa" class="button_canvas" id="isa_button"></canvas>
+				<a data-name="isa" href="#isa" title="isa" name="isa" class="button_link">isa</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="jera" class="button_canvas" id="jera_button"></canvas>
+				<a data-name="jera" href="#jera" title="jera" name="jera" class="button_link">jera</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="eihwaz" class="button_canvas" id="eihwaz_button"></canvas>
+				<a data-name="eihwaz" href="#eihwaz" title="eihwaz" name="eihwaz" class="button_link">eihwaz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="perthro" class="button_canvas" id="perthro_button"></canvas>
+				<a data-name="perthro" href="#perthro" title="perthro" name="perthro" class="button_link">perthro</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="elhaz" class="button_canvas" id="elhaz_button"></canvas>
+				<a data-name="elhaz" href="#elhaz" title="elhaz" name="elhaz" class="button_link">elhaz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="sowilo" class="button_canvas" id="sowilo_button"></canvas>
+				<a data-name="sowilo" href="#sowilo" title="sowilo" name="sowilo" class="button_link">sowilo</a>
+			</div>
+		</div>
+		<div class="table_row">
+			<div class="table_cell">
+				<canvas data-name="tiwaz" class="button_canvas" id="tiwaz_button"></canvas>
+				<a data-name="tiwaz" href="#tiwaz" title="tiwaz" name="tiwaz" class="button_link">tiwaz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="berkano" class="button_canvas" id="berkano_button"></canvas>
+				<a data-name="berkano" href="#berkano" title="berkano" name="berkano" class="button_link">berkano</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="ehwaz" class="button_canvas" id="ehwaz_button"></canvas>
+				<a data-name="ehwaz" href="#ehwaz" title="ehwaz" name="ehwaz" class="button_link">ehwaz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="mannaz" class="button_canvas" id="mannaz_button"></canvas>
+				<a data-name="mannaz" href="#mannaz" title="mannaz" name="mannaz" class="button_link">mannaz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="laguz" class="button_canvas" id="laguz_button"></canvas>
+				<a data-name="laguz" href="#laguz" title="laguz" name="laguz" class="button_link">laguz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="ingwaz" class="button_canvas" id="ingwaz_button"></canvas>
+				<a data-name="ingwaz" href="#ingwaz" title="ingwaz" name="ingwaz" class="button_link">ingwaz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="dagaz" class="button_canvas" id="dagaz_button"></canvas>
+				<a data-name="dagaz" href="#dagaz" title="dagaz" name="dagaz" class="button_link">dagaz</a>
+			</div>
+			<div class="table_cell">
+				<canvas data-name="othala" class="button_canvas" id="othala_button"></canvas>
+				<a data-name="othala"  href="#othala" title="othala" name="othala" class="button_link">othala</a>
+			</div>
+			
+		</div>
 	</div>
 </div>
-
-<div data-role="page" id="uruz" data-theme="a">
-	<div data-role="header" id="uruz_header" data-nobackbtn="true">
-		<h1>Uruz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="uruz_content">
-		<div id="uruz_desc">
-			<ul>
-				<li>ox</li>
-			</ul>
-		</div>
-		
-		<div id="uruz_image">
-			<img src="images/phone-uruz.png" alt="uruz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="uruz_footer" class="align-right" data-role="footer">
-		<a href="#fehu" class="align-left">fehu</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#thurisaz" class="aligh-right">thurisaz</a>
-	</div>	
+<div id="footer">
+	<p>
+		All content and design done by <a href="http://twitter.com/#!/PlayWithPolish">Jessica Spaulding</a>. All HTML and Javascript done by <a href="http://twitter.com/#!/ryanspaulding">Ryan Spaulding</a>. This site is going to work best in a modern browser. It should work and look great on tablets, phones and the desktop. For the geeks out there the site is using CSS media queries to be responsive. If you have any feature requests or find any bugs please let me know at runeapp [at] spauldinghill.org. This code is available  on <a href="https://github.com/ryanspaulding/runeapp">github</a>. Follow <a href="http://twitter.com/#!/runeapp">@runeapp</a> on twitter for updates and news. 
+	</p>
 </div>
-
-<div data-role="page" id="thurisaz" data-theme="a">
-	<div data-role="header" id="thurisaz_header" data-nobackbtn="true">
-		<h1>Thurisaz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="thurisaz_content">
-		<div id="thurisaz_desc">
-			<ul>
-				<li>Thor</li>
-			</ul>
-		</div>
-		
-		<div id="thurisaz_image">
-			<img src="images/phone-thurisaz.png" alt="thurisaz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="thurisaz_footer" class="align-right" data-role="footer">
-		<a href="#uruz" class="align-left">uruz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#ansuz" class="aligh-right">ansuz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="ansuz" data-theme="a">
-	<div data-role="header" id="ansuz_header" data-nobackbtn="true">
-		<h1>Ansuz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="ansuz_content">
-		<div id="ansuz_desc">
-			<ul>
-				<li>god mouth</li>
-				<li>wisdom</li>
-			</ul>
-		</div>
-		
-		<div id="ansuz_image">
-			<img src="images/phone-ansuz.png" alt="ansuz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="ansuz_footer" class="align-right" data-role="footer">
-		<a href="#thurisaz" class="align-left">thurisaz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#raidho" class="aligh-right">raidho</a>
-	</div>	
-</div>
-
-<div data-role="page" id="raidho" data-theme="a">
-	<div data-role="header" id="raidho_header" data-nobackbtn="true">
-		<h1>Raidho</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="raidho_content">
-		<div id="raidho_desc">
-			<ul>
-				<li>Ride</li>
-			</ul>
-		</div>
-		
-		<div id="raidho_image">
-			<img src="images/phone-raidho.png" alt="raidho" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="raidho_footer" class="align-right" data-role="footer">
-		<a href="#ansuz" class="align-left">ansuz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#kenaz" class="aligh-right">kenaz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="kenaz" data-theme="a">
-	<div data-role="header" id="kenaz_header" data-nobackbtn="true">
-		<h1>Kenaz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="kenaz_content">
-		<div id="kenaz_desc">
-			<ul>
-				<li>Torch</li>
-			</ul>
-		</div>
-		
-		<div id="kenaz_image">
-			<img src="images/phone-kenaz.png" alt="kenaz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="kenaz_footer" class="align-right" data-role="footer">
-		<a href="#raidho" class="align-left">raidho</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#gebo" class="aligh-right">gebo</a>
-	</div>	
-</div>
-
-<div data-role="page" id="gebo" data-theme="a">
-	<div data-role="header" id="gebo_header" data-nobackbtn="true">
-		<h1>Gebo</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="gebo_content">
-		<div id="gebo_desc">
-			<ul>
-				<li>Gift</li>
-			</ul>
-		</div>
-		
-		<div id="gebo_image">
-			<img src="images/phone-gebo.png" alt="gebo" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="gebo_footer" class="align-right" data-role="footer">
-		<a href="#kenaz" class="align-left">kenaz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#wunjo" class="aligh-right">wunjo</a>
-	</div>	
-</div>
-
-<div data-role="page" id="wunjo" data-theme="a">
-	<div data-role="header" id="wunjo_header" data-nobackbtn="true">
-		<h1>Wunjo</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="wunjo_content">
-		<div id="wunjo_desc">
-			<ul>
-				<li>Joy</li>
-			</ul>
-		</div>
-		
-		<div id="wunjo_image">
-			<img src="images/phone-wunjo.png" alt="wunjo" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="wunjo_footer" class="align-right" data-role="footer">
-		<a href="#gebo" class="align-left">gebo</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#hagalaz" class="aligh-right">hagalaz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="hagalaz" data-theme="a">
-	<div data-role="header" id="hagalaz_header" data-nobackbtn="true">
-		<h1>Hagalaz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="hagalaz_content">
-		<div id="hagalaz_desc">
-			<ul>
-				<li>Hail</li>
-			</ul>
-		</div>
-		
-		<div id="hagalaz_image">
-			<img src="images/phone-hagalaz.png" alt="hagalaz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="hagalaz_footer" class="align-right" data-role="footer">
-		<a href="#wunjo" class="align-left">wunjo</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#naudhiz" class="aligh-right">naudhiz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="naudhiz" data-theme="a">
-	<div data-role="header" id="naudhiz_header" data-nobackbtn="true">
-		<h1>Naudhiz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="naudhiz_content">
-		<div id="naudhiz_desc">
-			<ul>
-				<li>Need</li>
-			</ul>
-		</div>
-		
-		<div id="naudhiz_image">
-			<img src="images/phone-naudhiz.png" alt="naudhiz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="naudhiz_footer" class="align-right" data-role="footer">
-		<a href="#hagalaz" class="align-left">hagalaz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#isa" class="aligh-right">isa</a>
-	</div>	
-</div>
-
-<div data-role="page" id="isa" data-theme="a">
-	<div data-role="header" id="isa_header" data-nobackbtn="true">
-		<h1>Isa</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="isa_content">
-		<div id="isa_desc">
-			<ul>
-				<li>Ice</li>
-			</ul>
-		</div>
-		
-		<div id="isa_image">
-			<img src="images/phone-isa.png" alt="isa" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="isa_footer" class="align-right" data-role="footer">
-		<a href="#naudhiz" class="align-left">naudhiz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#jera" class="aligh-right">jera</a>
-	</div>	
-</div>
-
-<div data-role="page" id="jera" data-theme="a">
-	<div data-role="header" id="jera_header" data-nobackbtn="true">
-		<h1>Jera</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="jera_content">
-		<div id="jera_desc">
-			<ul>
-				<li>Year</li>
-			</ul>
-		</div>
-		
-		<div id="jera_image">
-			<img src="images/phone-jera.png" alt="jera" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="jera_footer" class="align-right" data-role="footer">
-		<a href="#isa" class="align-left">isa</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#eihwaz" class="aligh-right">eihwaz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="eihwaz" data-theme="a">
-	<div data-role="header" id="eihwaz_header" data-nobackbtn="true">
-		<h1>Eihwaz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="eihwaz_content">
-		<div id="eihwaz_desc">
-			<ul>
-				<li>Yew Tree</li>
-			</ul>
-		</div>
-		
-		<div id="eihwaz_image">
-			<img src="images/phone-eihwaz.png" alt="eihwaz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="eihwaz_footer" class="align-right" data-role="footer">
-		<a href="#jera" class="align-left">jera</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#perthro" class="aligh-right">perthro</a>
-	</div>	
-</div>
-
-<div data-role="page" id="perthro" data-theme="a">
-	<div data-role="header" id="perthro_header" data-nobackbtn="true">
-		<h1>Perthro</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="perthro_content">
-		<div id="perthro_desc">
-			<ul>
-				<li>Cup</li>
-				</li>Lot</li>
-				<li>Game</li>
-			</ul>
-		</div>
-		
-		<div id="perthro_image">
-			<img src="images/phone-perthro.png" alt="perthro" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="perthro_footer" class="align-right" data-role="footer">
-		<a href="#eihwaz" class="align-left">eihwaz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#elhaz" class="aligh-right">elhaz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="elhaz" data-theme="a">
-	<div data-role="header" id="elhaz_header" data-nobackbtn="true">
-		<h1>Elhaz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="elhaz_content">
-		<div id="elhaz_desc">
-			<ul>
-				<li>Protection</li>
-			</ul>
-		</div>
-		
-		<div id="elhaz_image">
-			<img src="images/phone-elhaz.png" alt="elhaz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="elhaz_footer" class="align-right" data-role="footer">
-		<a href="#perthro" class="align-left">perthro</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#sowilo" class="aligh-right">sowilo</a>
-	</div>	
-</div>
-
-<div data-role="page" id="sowilo" data-theme="a">
-	<div data-role="header" id="sowilo_header" data-nobackbtn="true">
-		<h1>Sowilo</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="sowilo_content">
-		<div id="sowilo_desc">
-			<ul>
-				<li>Sun</li>
-			</ul>
-		</div>
-		
-		<div id="sowilo_image">
-			<img src="images/phone-sowilo.png" alt="sowilo" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="sowilo_footer" class="align-right" data-role="footer">
-		<a href="#elhaz" class="align-left">elhaz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#tiwaz" class="aligh-right">tiwaz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="tiwaz" data-theme="a">
-	<div data-role="header" id="tiwaz_header" data-nobackbtn="true">
-		<h1>Tiwaz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="tiwaz_content">
-		<div id="tiwaz_desc">
-			<ul>
-				<li>Tyr</li>
-			</ul>
-		</div>
-		
-		<div id="tiwaz_image">
-			<img src="images/phone-tiwaz.png" alt="tiwaz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="tiwaz_footer" class="align-right" data-role="footer">
-		<a href="#sowilo" class="align-left">sowilo</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#berkano" class="aligh-right">berkano</a>
-	</div>	
-</div>
-
-<div data-role="page" id="berkano" data-theme="a">
-	<div data-role="header" id="berkano_header" data-nobackbtn="true">
-		<h1>Berkano</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="berkano_content">
-		<div id="berkano_desc">
-			<ul>
-				<li>Birch Tree</li>
-			</ul>
-		</div>
-		
-		<div id="berkano_image">
-			<img src="images/phone-berkano.png" alt="berkano" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="berkano_footer" class="align-right" data-role="footer">
-		<a href="#tiwaz" class="align-left">tiwaz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#ehwaz" class="aligh-right">ehwaz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="ehwaz" data-theme="a">
-	<div data-role="header" id="ehwaz_header" data-nobackbtn="true">
-		<h1>Ehwaz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="ehwaz_content">
-		<div id="ehwaz_desc">
-			<ul>
-				<li>Horse</li>
-			</ul>
-		</div>
-		
-		<div id="ehwaz_image">
-			<img src="images/phone-ehwaz.png" alt="ehwaz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="ehwaz_footer" class="align-right" data-role="footer">
-		<a href="#berkano" class="align-left">berkano</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#mannaz" class="aligh-right">mannaz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="mannaz" data-theme="a">
-	<div data-role="header" id="mannaz_header" data-nobackbtn="true">
-		<h1>Mannaz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="mannaz_content">
-		<div id="mannaz_desc">
-			<ul>
-				<li>Man</li>
-			</ul>
-		</div>
-		
-		<div id="mannaz_image">
-			<img src="images/phone-mannaz.png" alt="mannaz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="mannaz_footer" class="align-right" data-role="footer">
-		<a href="#ehwaz" class="align-left">ehwaz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#laguz" class="aligh-right">laguz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="laguz" data-theme="a">
-	<div data-role="header" id="laguz_header" data-nobackbtn="true">
-		<h1>Laguz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="laguz_content">
-		<div id="laguz_desc">
-			<ul>
-				<li>Lake Leek</li>
-			</ul>
-		</div>
-		
-		<div id="laguz_image">
-			<img src="images/phone-laguz.png" alt="laguz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="laguz_footer" class="align-right" data-role="footer">
-		<a href="#mannaz" class="align-left">mannaz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#ingwaz" class="aligh-right">ingwaz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="ingwaz" data-theme="a">
-	<div data-role="header" id="ingwaz_header" data-nobackbtn="true">
-		<h1>Ingwaz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="ingwaz_content">
-		<div id="ingwaz_desc">
-			<ul>
-				<li>Ing</li>
-			</ul>
-		</div>
-		
-		<div id="ingwaz_image">
-			<img src="images/phone-ingwaz.png" alt="ingwaz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="ingwaz_footer" class="align-right" data-role="footer">
-		<a href="#laguz" class="align-left">laguz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#dagaz" class="aligh-right">dagaz</a>
-	</div>	
-</div>
-
-<div data-role="page" id="dagaz" data-theme="a">
-	<div data-role="header" id="dagaz_header" data-nobackbtn="true">
-		<h1>Dagaz</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="dagaz_content">
-		<div id="dagaz_desc">
-			<ul>
-				<li>Day</li>
-			</ul>
-		</div>
-		
-		<div id="dagaz_image">
-			<img src="images/phone-dagaz.png" alt="dagaz" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="dagaz_footer" class="align-right" data-role="footer">
-		<a href="#ingwaz" class="align-left">ingwaz</a>
-		<a href="#toc" class="align-center">runes</a>
-	 	<a href="#othala" class="aligh-right">othala</a>
-	</div>	
-</div>
-
-<div data-role="page" id="othala" data-theme="a">
-	<div data-role="header" id="othala_header" data-nobackbtn="true">
-		<h1>Othala</h1>
-	</div><!-- end header div -->
-	
-	<div data-role="content" id="othala_content">
-		<div id="othala_desc">
-			<ul>
-				<li>Home</li>
-			</ul>
-		</div>
-		
-		<div id="othala_image">
-			<img src="images/phone-othala.png" alt="othala" />
-		</div> <!-- end image div -->
-	</div> <!-- end desc div -->
-	
-	<div id="othala_footer" class="align-right" data-role="footer">
-		<a href="#ingwaz" class="align-left">ingwaz</a>
-		<a href="#toc">runes</a>
-	</div>	
-</div>
-
-<div data-role="page"  id="toc" data-theme="a">
-	<ul data-role="listview" data-theme="a">
-		<li>
-			<img src="images/phone-fehu.png" alt="fehu" class="ui-li-thumb" />
-			<a href="#fehu">fehu</a>
-		</li>
-		<li>
-			<img src="images/phone-uruz.png" alt="uruz" class="ui-li-thumb" />
-			<a href="#uruz">uruz</a>
-		</li>
-		<li>
-			<img src="images/phone-thurisaz.png" alt="thurisaz" class="ui-li-thumb" />
-			<a href="#thurisaz">thurisaz</a>
-		</li>
-		<li>
-			<img src="images/phone-ansuz.png" alt="ansuz" class="ui-li-thumb" />
-			<a href="#ansuz">ansuz</a>
-		</li>
-		<li>
-			<img src="images/phone-raidho.png" alt="raidho" class="ui-li-thumb" />
-			<a href="#raidho">raidho</a>
-		</li>
-		<li>
-			<img src="images/phone-kenaz.png" alt="kenaz" class="ui-li-thumb" />
-			<a href="#kenaz">kenaz</a>
-		</li>
-		<li>
-			<img src="images/phone-gebo.png" alt="gebo" class="ui-li-thumb" />
-			<a href="#gebo">gebo</a>
-		</li>
-		<li>
-			<img src="images/phone-wunjo.png" alt="wunjo" class="ui-li-thumb" />
-			<a href="#wunjo">wunjo</a>
-		</li>
-		<li>
-			<img src="images/phone-hagalaz.png" alt="hagalaz" class="ui-li-thumb" />
-			<a href="#hagalaz">hagalaz</a>
-		</li>
-		<li>
-			<img src="images/phone-naudhiz.png" alt="naudhiz" class="ui-li-thumb" />
-			<a href="#naudhiz">naudhiz</a>
-		</li>
-		<li>
-			<img src="images/phone-isa.png" alt="isa" class="ui-li-thumb" />
-			<a href="#isa">isa</a>
-		</li>
-		<li>
-			<img src="images/phone-jera.png" alt="jera" class="ui-li-thumb" />
-			<a href="#jera">jera</a>
-		</li>
-		<li>
-			<img src="images/phone-eihwaz.png" alt="eihwaz" class="ui-li-thumb" />
-			<a href="#eihwaz">eihwaz</a>
-		</li>
-		<li>
-			<img src="images/phone-perthro.png" alt="perthro" class="ui-li-thumb" />
-			<a href="#perthro">perthro</a>
-		</li>
-		<li>
-			<img src="images/phone-elhaz.png" alt="elhaz" class="ui-li-thumb" />
-			<a href="#elhaz">elhaz</a>
-		</li>
-		<li>
-			<img src="images/phone-sowilo.png" alt="sowilo" class="ui-li-thumb" />
-			<a href="#sowilo">sowilo</a>
-		</li>
-		<li>
-			<img src="images/phone-tiwaz.png" alt="tiwaz" class="ui-li-thumb" />
-			<a href="#tiwaz">tiwaz</a>
-		</li>
-		<li>
-			<img src="images/phone-berkano.png" alt="berkano" class="ui-li-thumb" />
-			<a href="#berkano">berkano</a>
-		</li>
-		<li>
-			<img src="images/phone-ehwaz.png" alt="ehwaz" class="ui-li-thumb" />
-			<a href="#ehwaz">ehwaz</a>
-		</li>
-		<li>
-			<img src="images/phone-mannaz.png" alt="mannaz" class="ui-li-thumb" />
-			<a href="#mannaz">mannaz</a>
-		</li>
-		<li>
-			<img src="images/phone-laguz.png" alt="laguz" class="ui-li-thumb" />
-			<a href="#laguz">laguz</a>
-		</li>
-		<li>
-			<img src="images/phone-ingwaz.png" alt="ingwaz" class="ui-li-thumb" />
-			<a href="#ingwaz">ingwaz</a>
-		</li>
-		<li>
-			<img src="images/phone-dagaz.png" alt="dagaz" class="ui-li-thumb" />
-			<a href="#dagaz">dagaz</a>
-		</li>
-		<li>
-			<img src="images/phone-othala.png" alt="othala" class="ui-li-thumb" />
-			<a href="#othala">othala</a>
-		</li>
-	</ul>
-</div>
-
+</div> <!-- container -->
 </body>
 </html>
